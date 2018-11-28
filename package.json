@@ -1,0 +1,17 @@
+{
+  "name": "authentic",
+  "version": "1.0.0",
+  "description": "template of website for service companies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mateacademy students team",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
