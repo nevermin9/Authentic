@@ -2,7 +2,6 @@
   "name": "authentic",
   "version": "1.0.0",
   "description": "template of website for service companies",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,5 +12,8 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "gulp-plumber": "^1.2.1"
   }
 }
