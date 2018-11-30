@@ -1,0 +1,19 @@
+/* main style */
+
+$main-color: #03a9f4;
+$main-color-lightness: lightness($main-color,10%);
+$bg-grey: #f8f8f8;
+$bg-dark-grey: #343131;
+$bg-footer-light-grey: #333333;
+
+$h2-color: #000000;
+$text-color: #666666;
+
+/* main style end*/
+/* media queries mixin*/
+
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+
+/* media queries mixin end*/
