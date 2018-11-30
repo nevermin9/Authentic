@@ -1,0 +1,38 @@
+// media queries
+// 576px;
+@mixin sm {
+ @media (min-width: #{$screen-sm-min}) {
+   @content
+ }
+}
+
+// 768px;
+@mixin md {
+ @media (min-width: #{$screen-md-min}) {
+   @content
+ }
+}
+
+// 992px;
+@mixin lg {
+ @media (min-width: #{$screen-lg-min}) {
+   @content
+ }
+}
+
+// 1200px;
+@mixin xl {
+ @media (min-width: #{$screen-xl-min}) {
+   @content
+ }
+}
+
+// Custom devices
+@mixin rwd($screen) {
+  @media (min-width: $screen+'px') {
+      @content;
+  }
+}
+// end of media queries
+
+// animations
