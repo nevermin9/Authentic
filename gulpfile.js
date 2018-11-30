@@ -6,8 +6,9 @@ var gulp         = require('gulp'),
 gulp.task('sass', function() {
   return gulp.src('src/scss/main.scss')
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(plumber())
     .pipe(autoprefixer({
-      browsers: ['last 20 versions'],
+      browsers: ['> 1%', 'last 2 Chrome versions', 'Firefox ESR'],
       cascade: false
     }))
     .pipe(gulp.dest('src/css'))
