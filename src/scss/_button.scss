@@ -1,0 +1,29 @@
+.button {
+  @include button-padding(10px,15px);
+  display: block;
+  border: 2px solid $text-start; 
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $text-start; 
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  background-image: linear-gradient($main-color, $main-color);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size .5s, color .5s;
+
+  @include sm {
+        @include button-padding(15px,30px);
+  }
+  
+  @include lg {
+        @include button-padding(15px,50px);
+  }
+
+    &:hover {
+      background-size: 100% 100%;
+      border-color: $main-color;
+    }
+}

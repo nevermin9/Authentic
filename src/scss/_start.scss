@@ -1,0 +1,131 @@
+.start {
+  padding: 40px 5px 50px;
+  position: relative;
+  background-image: url("../img/bg/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center; 
+  color: $text-start; 
+  font-family: $font-stack;
+
+  @include sm {
+        padding: 60px 25px 60px;
+  }
+
+  @include lg {
+        padding: 150px 25px 100px;
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 1;
+  }  
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: $curtain-color;
+    height: 100%;
+    width: 100%;      
+    top: 0;
+    left: 0;
+  }
+
+  &__heading {
+    @include text(25px,2px);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+
+    @include sm {
+        @include text(40px,4px);
+        margin-bottom: 15px;
+    }
+
+    @include lg {
+        @include text(65px,6px);
+        margin-bottom: 30px;
+    }
+
+    &-paragraph {
+      @include text(16px,1px);
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 15px;
+      @include sm {
+        @include text(20px,2px);
+      }
+
+      @include lg {
+        @include text(35px,4px);
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__timer {
+    text-align: center;
+    padding: 0 5px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    @include text(35px,2px);
+
+    @include sm {
+      @include text(50px,4px);
+    }
+
+    @include lg {
+      @include text(70px,4px);
+    }
+
+    &-paragraph {
+      text-align: center;
+      padding: 0 5px;
+      @include text(12px,2px);
+      word-spacing: 32px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+
+      @include sm {
+        word-spacing: 70px;
+        margin-bottom: 50px;
+      }
+
+      @include lg {
+        word-spacing: 100px;
+        margin-bottom: 100px;
+      }
+    }
+  }
+
+  &__links {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+
+    @include sm {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &-item {
+      margin-bottom: 15px;
+
+      @include sm {
+        margin-bottom: 0;
+        margin-right: 30px; 
+      }
+    
+      &:last-child { 
+        margin-bottom: 0;
+
+        @include sm {
+          margin-right: 0; 
+        } 
+      }
+    }
+  }  
+}
