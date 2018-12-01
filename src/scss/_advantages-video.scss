@@ -1,0 +1,19 @@
+.advantages-video {
+
+
+  &__info-items {
+
+    @include sm {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @include rwd(676) {
+      flex-wrap: nowrap;
+      padding: 5% 0;
+      justify-content: space-evenly;
+    }
+
+  }
+}

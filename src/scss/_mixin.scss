@@ -1,3 +1,19 @@
+@mixin width-height ($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+/* brand mixin */
+
+@mixin border ($top, $right, $bottom, $left) {
+  border-top: 0px + $top dashed $brands-border-color;
+  border-right: 0px + $right dashed $brands-border-color;
+  border-bottom: 0px + $bottom dashed $brands-border-color;
+  border-left: 0px + $left dashed $brands-border-color;
+}
+
+/* brand mixin end*/
+
 // media queries
 // 576px;
 @mixin sm {

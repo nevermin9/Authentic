@@ -1,0 +1,58 @@
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 0;
+
+    @include sm {
+      padding: 50px 50px;
+    }
+
+    @include rwd(676) {
+      padding: 0;
+    }
+
+  &__image {
+    background: $main-color;
+    font-size: 24px;
+    color: white;
+    border-radius: 50%;
+    max-width: 80px;
+    width: 100%;
+    line-height: 3.3em;
+    text-align: center;
+
+    &--transform {
+      font-size: 22px;
+      transform: rotate(-45deg);
+      line-height: 3.6em;
+    }
+
+    &--bullhorn {
+
+      @include sm {
+        padding: 50px 70px;
+      }
+
+      @include rwd(676) {
+        padding: 0;
+      }
+    }
+  }
+
+  &__headline {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: $h2-color;
+  }
+
+  &__paragraph {
+    margin-top: 14px;
+    font-size: 14px;
+    text-align: center;
+    color: $text-color;
+  }
+}
+
