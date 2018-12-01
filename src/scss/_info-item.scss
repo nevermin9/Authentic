@@ -1,0 +1,33 @@
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__image {
+    background: $main-color;
+    font-size: 24px;
+    color: white;
+    border-radius: 50%;
+    max-width: 80px;
+    width: 100%;
+    line-height: 3.2em;
+    text-align: center;
+
+    &--transform {
+      transform: rotate(-45deg);
+      line-height: 3.3em;
+    }
+  }
+
+  &__headline {
+    font-size: 14px;
+    font-weight: bold;
+    color: $h2-color;
+  }
+
+  &__paragraph {
+    font-size: 14px;
+    color: $text-color;
+  }
+}
+
