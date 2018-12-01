@@ -1,7 +1,7 @@
 /* main style */
 
 $main-color: #03a9f4;
-$main-color-lightness: lightness($main-color,10%);
+$main-color-lightness: lighten($main-color,10%);
 $bg-grey: #f8f8f8;
 $bg-dark-grey: #343131;
 $bg-footer-light-grey: #333333;
