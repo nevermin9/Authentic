@@ -18,12 +18,12 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6% 0;
+  padding: 25px 0;
 }
 
 @media (min-width: 576px) {
   .info-item {
-    padding: 6% 6%;
+    padding: 50px 50px;
   }
 }
 
@@ -45,13 +45,14 @@ img {
 }
 
 .info-item__image--transform {
+  font-size: 22px;
   transform: rotate(-45deg);
-  line-height: 3.3em;
+  line-height: 3.6em;
 }
 
 @media (min-width: 576px) {
   .info-item__image--bullhorn {
-    padding: 6% 9%;
+    padding: 50px 70px;
   }
 }
 

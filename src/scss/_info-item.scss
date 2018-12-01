@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6% 0;
+  padding: 25px 0;
 
     @include sm {
-      padding: 6% 6%;
+      padding: 50px 50px;
     }
 
     @include rwd(676) {
@@ -23,14 +23,15 @@
     text-align: center;
 
     &--transform {
+      font-size: 22px;
       transform: rotate(-45deg);
-      line-height: 3.3em;
+      line-height: 3.6em;
     }
 
     &--bullhorn {
 
       @include sm {
-        padding: 6% 9%;
+        padding: 50px 70px;
       }
 
       @include rwd(676) {
