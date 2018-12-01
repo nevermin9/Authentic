@@ -18,7 +18,10 @@ gulp.task('sass', function() {
 
 gulp.task('serve', ['sass'], function() {
   browserSync.init({
-    server: "src/"
+    server: {
+      baseDir: 'src'
+    },
+    notify: false
   });
   gulp.watch("src/scss/**/*.scss", ['sass']);
   gulp.watch("src/*.html").on('change', browserSync.reload);
