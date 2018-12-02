@@ -4,28 +4,29 @@
   <meta charset="utf-8">
   <title>Authentic</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/main.css">
+  <link href="https://vjs.zencdn.net/7.3.0/video-js.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
 </head>
-  <body>
-    <section class="start">
-      <div class="start__wrapper">
-        <h1 class="start__heading">start your project</h1>
-        <p class="start__heading-paragraph line line--center">conference event day 2017</p>
-        <div id="timer" class="start__timer"></div>
-        <p class="start__timer-paragraph">days hours mins secs</p>
-        <div class="start__links">
-          <a href="#" class="start__links-item button">take a tour</a>
-          <a href="#" class="start__links-item button">purchase</a>
-        </div>
+<body>
+  <section class="start">
+    <div class="start__wrapper">
+      <h1 class="start__heading">start your project</h1>
+      <p class="start__heading-paragraph line line--center">conference event day 2017</p>
+      <div id="timer" class="start__timer"></div>
+      <p class="start__timer-paragraph">days hours mins secs</p>
+      <div class="start__links">
+        <a href="#" class="start__links-item button">take a tour</a>
+        <a href="#" class="start__links-item button">purchase</a>
       </div>
-    </section>
-    <section class="advantages-video">
+    </div>
+  </section>
+  <section class="advantages-video">
     <article class="advantages-video__info-items">
       <div class="info-item advantages-video__info-item">
         <div class="info-item__image">
-          <span class=" fas fa-microphone">
+          <span class="fas fa-microphone">
           </span>
         </div>
         <h2 class="info-item__headline">
@@ -72,27 +73,41 @@
         </p>
       </div>
     </article>
-    <div class="brands">
-      <div class="brands__block brands__block--first">
-        <img src="img/content/brand-hendeson.png" alt="Logo" width="126" height="100">
-      </div>
-      <div class="brands__block brands__block--second">
-        <img src="img/content/brand-authentic.png" alt="Logo" width="158" height="100">
-      </div>
-      <div class="brands__block brands__block--third">
-        <img src="img/content/brand-authentic-three.png" alt="Logo" width="127" height="100">
-      </div>
-      <div class="brands__block brands__block--fourth">
-        <img src="img/content/brand-vintage-authentic.png" alt="Logo" width="136" height="100">
-      </div>
-      <div class="brands__block brands__block--fifth">
-        <img src="img/content/brand-authentic-two.png" alt="Logo" width="210" height="100">
-      </div>
-      <div class="brands__block brands__block--sixth">
-        <img src="img/content/brand-vintage-authentic-two.png" alt="Logo" width="110" height="111">
-      </div>
+    <figure id="videoContainer">
+      <video 
+        id="video" 
+        preload="metadata" 
+        poster="img/content/video_second_layer.png"
+        controls 
+        data-setup="{}"
+        class="video-js vjs-default-skin">
+        <source src="video/videoplayback.mp4" type="video/mp4">
+       </div>
+     </video>
+   </figure>
+   <div class="brands">
+    <div class="brands__block brands__block--first">
+      <img src="img/content/brand-hendeson.png" alt="Logo" width="126" height="100">
     </div>
-  </section>
-  <script src="js/timer.js"></script>
-  </body>
+    <div class="brands__block brands__block--second">
+      <img src="img/content/brand-authentic.png" alt="Logo" width="158" height="100">
+    </div>
+    <div class="brands__block brands__block--third">
+      <img src="img/content/brand-authentic-three.png" alt="Logo" width="127" height="100">
+    </div>
+    <div class="brands__block brands__block--fourth">
+      <img src="img/content/brand-vintage-authentic.png" alt="Logo" width="136" height="100">
+    </div>
+    <div class="brands__block brands__block--fifth">
+      <img src="img/content/brand-authentic-two.png" alt="Logo" width="210" height="100">
+    </div>
+    <div class="brands__block brands__block--sixth">
+      <img src="img/content/brand-vintage-authentic-two.png" alt="Logo" width="110" height="111">
+    </div>
+  </div>
+</section>
+<script src="js/timer.js"></script>
+<script src="js/video.js"></script>
+<script src="https://vjs.zencdn.net/7.3.0/video.js"></script>
+</body>
 </html>
