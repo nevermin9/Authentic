@@ -1,19 +1,238 @@
+/* main style */
+/* main style end*/
+/* media queries mixin*/
+/* media queries mixin end*/
+/* brands */
+/* brands end*/
 *,
 *:after,
 *:before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Open Sans", "Arial", sans-serif;
 }
 
 img {
   display: block;
 }
 
-/* main style */
-/* main style end*/
-/* media queries mixin*/
-/* media queries mixin end*/
+/* brand mixin */
+/* brand mixin end*/
+.button {
+  padding: 10px 15px;
+  display: block;
+  border: 2px solid #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  background-image: linear-gradient(#03a9f4, #03a9f4);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size .5s, color .5s;
+}
+
+@media (min-width: 576px) {
+  .button {
+    padding: 15px 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .button {
+    padding: 15px 50px;
+  }
+}
+
+.button:hover {
+  background-size: 100% 100%;
+  border-color: #03a9f4;
+}
+
+.start {
+  padding: 40px 5px 50px;
+  position: relative;
+  background-image: url("../img/bg/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  color: #fff;
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+@media (min-width: 576px) {
+  .start {
+    padding: 60px 25px 60px;
+  }
+}
+
+@media (min-width: 992px) {
+  .start {
+    padding: 150px 25px 100px;
+  }
+}
+
+.start__wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.start:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.start__heading {
+  font-size: 25px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 576px) {
+  .start__heading {
+    font-size: 40px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .start__heading {
+    font-size: 65px;
+    letter-spacing: 6px;
+    margin-bottom: 30px;
+  }
+}
+
+.start__heading-paragraph {
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 576px) {
+  .start__heading-paragraph {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (min-width: 992px) {
+  .start__heading-paragraph {
+    font-size: 35px;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+  }
+}
+
+.start__timer {
+  text-align: center;
+  padding: 0 5px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 35px;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 576px) {
+  .start__timer {
+    font-size: 50px;
+    letter-spacing: 4px;
+  }
+}
+
+@media (min-width: 992px) {
+  .start__timer {
+    font-size: 70px;
+    letter-spacing: 4px;
+  }
+}
+
+.start__timer-paragraph {
+  text-align: center;
+  padding: 0 5px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  word-spacing: 32px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 576px) {
+  .start__timer-paragraph {
+    word-spacing: 70px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .start__timer-paragraph {
+    word-spacing: 110px;
+    margin-bottom: 100px;
+  }
+}
+
+.start__links {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 576px) {
+  .start__links {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.start__links-item {
+  margin-bottom: 15px;
+}
+
+@media (min-width: 576px) {
+  .start__links-item {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+}
+
+.start__links-item:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+  .start__links-item:last-child {
+    margin-right: 0;
+  }
+}
+
+.line:after {
+  content: "";
+  display: block;
+  width: 50px;
+  border: 1px solid #2ebcfc;
+}
+
+.line--center:after {
+  margin: 30px auto 0;
+}
+
 .info-item {
   display: flex;
   flex-direction: column;
@@ -92,10 +311,7 @@ img {
     justify-content: space-evenly;
   }
 }
-/* brands */
-/* brands end*/
-/* brand mixin */
-/* brand mixin end*/
+
 .brands {
   display: grid;
   grid-template-columns: 1fr;

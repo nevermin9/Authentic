@@ -1,5 +1,5 @@
 /* main style */
-
+$font-stack: "Open Sans", "Arial", sans-serif;
 $main-color: #03a9f4;
 $main-color-lightness: lighten($main-color,10%);
 $bg-grey: #f8f8f8;
@@ -7,7 +7,9 @@ $bg-dark-grey: #343131;
 $bg-footer-light-grey: #333333;
 
 $h2-color: #000000;
+$curtain-color:rgba(0,0,0,0.5);
 $text-color: #666666;
+$text-start: #fff;
 
 /* main style end*/
 /* media queries mixin*/

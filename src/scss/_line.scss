@@ -1,0 +1,14 @@
+.line {
+  &:after {
+  content: "";
+  display: block;
+  width: 50px;
+  border: 1px solid $main-color-lightness;
+  }
+
+  &--center {
+    &:after {
+    margin: 30px auto 0;
+    }
+  }
+}
