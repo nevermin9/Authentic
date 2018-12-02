@@ -4,6 +4,8 @@
 /* media queries mixin end*/
 /* brands */
 /* brands end*/
+/* brand mixin */
+/* brand mixin end*/
 *,
 *:after,
 *:before {
@@ -17,8 +19,6 @@ img {
   display: block;
 }
 
-/* brand mixin */
-/* brand mixin end*/
 .button {
   padding: 10px 15px;
   display: block;
@@ -225,6 +225,7 @@ img {
 .line:after {
   content: "";
   display: block;
+  margin: 20px 0;
   width: 50px;
   border: 1px solid #2ebcfc;
 }
@@ -445,4 +446,26 @@ img {
 
 .brands img {
   margin: auto;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  padding: 100px;
+}
+
+.about__text {
+  margin-right: 50px;
+}
+
+.about__title {
+  text-transform: uppercase;
+}
+
+.about__description {
+  padding: 10px 0;
+}
+
+.about__description--bold {
+  font-weight: 600;
 }

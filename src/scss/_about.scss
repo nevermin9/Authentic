@@ -1,0 +1,24 @@
+.about {
+  display: flex;
+  align-items: center;
+  padding: 100px;
+
+  &__text {
+    margin-right: 50px;
+  }
+
+  &__img {
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__description {
+    padding: 10px 0;
+
+    &--bold {
+      font-weight: 600;
+    }
+  }
+}
