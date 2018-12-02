@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 6fr;
-  padding: 40px;
+  padding: 5px;
 
   @include sm {
     grid-template-columns: 1fr 1fr;
@@ -19,7 +19,7 @@
   &__block {
     margin: auto;
     width: 70%;
-    padding: 40px;
+    padding: 40px 0;
     border-bottom: 1px dashed $brands-border-color;
 
     @include sm {
@@ -69,6 +69,13 @@
     }
 
     &--fifth {
+      height: auto;
+      width: 100%;
+
+      @include rwd (320) {
+        height: auto;
+        width: auto;
+      }
 
       @include sm {
 
@@ -90,7 +97,7 @@
         @include border(0,0,0,0);
       }
       & img {
-        
+
         @include sm {
           width: auto;
           height: 100%;
