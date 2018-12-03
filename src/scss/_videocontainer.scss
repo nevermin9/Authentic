@@ -4,6 +4,7 @@
   @include sm {
     display: flex;
     justify-content: center;
+    padding: 40px 0;
   }
 
   &__video {
@@ -11,7 +12,7 @@
 
     @include sm {
       display: block;
-      width: 80vw;
+      width: 83vw;
       height: 40vw;
     }
   }
