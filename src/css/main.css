@@ -4,6 +4,8 @@
 /* media queries mixin end*/
 /* brands */
 /* brands end*/
+/* brand mixin */
+/* brand mixin end*/
 *,
 *:after,
 *:before {
@@ -17,8 +19,6 @@ img {
   display: block;
 }
 
-/* brand mixin */
-/* brand mixin end*/
 .button {
   padding: 10px 15px;
   display: block;
