@@ -299,6 +299,28 @@ body {
   color: #666666;
 }
 
+.advantages-video {
+  background: linear-gradient(to bottom, #f8f8f8 43%, white 43%);
+}
+
+@media (min-width: 576px) {
+  .advantages-video {
+    background: linear-gradient(to bottom, #f8f8f8 47%, white 47%);
+  }
+}
+
+@media (min-width: 676px) {
+  .advantages-video {
+    background: linear-gradient(to bottom, #f8f8f8 35%, white 35%);
+  }
+}
+
+@media (min-width: 992px) {
+  .advantages-video {
+    background: linear-gradient(to bottom, #f8f8f8 50%, white 50%);
+  }
+}
+
 @media (min-width: 576px) {
   .advantages-video__info-items {
     display: flex;
