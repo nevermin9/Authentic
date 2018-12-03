@@ -428,15 +428,7 @@ body {
 }
 
 .brands__block--fifth {
-  height: auto;
   width: 100%;
-}
-
-@media (min-width: 320px) {
-  .brands__block--fifth {
-    height: auto;
-    width: auto;
-  }
 }
 
 @media (min-width: 576px) {
