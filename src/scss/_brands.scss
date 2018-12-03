@@ -69,13 +69,7 @@
     }
 
     &--fifth {
-      height: auto;
       width: 100%;
-
-      @include rwd (320) {
-        height: auto;
-        width: auto;
-      }
 
       @include sm {
 
