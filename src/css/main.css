@@ -4,21 +4,24 @@
 /* media queries mixin end*/
 /* brands */
 /* brands end*/
+/* brand mixin */
+/* brand mixin end*/
 *,
 *:after,
 *:before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", "Arial", sans-serif;
 }
 
 img {
   display: block;
 }
 
-/* brand mixin */
-/* brand mixin end*/
+body {
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
 .button {
   padding: 10px 15px;
   display: block;
@@ -296,6 +299,28 @@ img {
   color: #666666;
 }
 
+.advantages-video {
+  background: linear-gradient(to bottom, #f8f8f8 43%, white 43%);
+}
+
+@media (min-width: 576px) {
+  .advantages-video {
+    background: linear-gradient(to bottom, #f8f8f8 47%, white 47%);
+  }
+}
+
+@media (min-width: 676px) {
+  .advantages-video {
+    background: linear-gradient(to bottom, #f8f8f8 35%, white 35%);
+  }
+}
+
+@media (min-width: 992px) {
+  .advantages-video {
+    background: linear-gradient(to bottom, #f8f8f8 50%, white 50%);
+  }
+}
+
 @media (min-width: 576px) {
   .advantages-video__info-items {
     display: flex;
@@ -457,4 +482,95 @@ img {
 
 .brands img {
   margin: auto;
+}
+
+.video-container {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .video-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.video-container__video {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .video-container__video {
+    display: block;
+    width: 80vw;
+    height: 40vw;
+  }
+}
+
+/*VIDEO JS STYLESHEETS*/
+.video-js {
+  font-size: 6px;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .video-js {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .video-js {
+    font-size: 12px;
+  }
+}
+
+.vjs-default-skin .vjs-big-play-button {
+  font-size: 3em;
+  line-height: 2em;
+  height: 2em;
+  width: 2em;
+  border: 0.06666em solid #fff;
+  border-radius: 50%;
+  left: 50%;
+  top: 55%;
+  margin-left: -1em;
+  margin-top: -1em;
+}
+
+.video-js .vjs-control-bar,
+.video-js .vjs-big-play-button,
+.video-js .vjs-menu-button .vjs-menu-content {
+  background-color: transparent;
+}
+
+.video-js .vjs-slider {
+  background-color: rgba(84, 84, 84, 0);
+  background-color: rgba(84, 84, 84, 0.5);
+}
+
+.video-js .vjs-volume-level,
+.video-js .vjs-play-progress,
+.video-js .vjs-slider-bar {
+  background: #fff;
+}
+
+.video-js .vjs-load-progress {
+  background: rgba(148, 148, 148, 0);
+  background: rgba(84, 84, 84, 0.5);
+}
+
+.video-js .vjs-load-progress div {
+  background: rgba(212, 212, 212, 0);
+  background: rgba(84, 84, 84, 0.75);
+}
+
+video[poster] {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.vjs-poster {
+  background-size: cover;
+  background-position: center;
 }
