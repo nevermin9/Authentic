@@ -228,6 +228,7 @@ body {
 .line:after {
   content: "";
   display: block;
+  margin: 20px 0;
   width: 50px;
   border: 1px solid #2ebcfc;
 }
@@ -476,6 +477,27 @@ body {
   margin: auto;
 }
 
+.about {
+  display: flex;
+  align-items: center;
+  padding: 100px;
+}
+
+.about__text {
+  margin-right: 50px;
+}
+
+.about__title {
+  text-transform: uppercase;
+}
+
+.about__description {
+  padding: 10px 0;
+}
+
+.about__description--bold {
+  font-weight: 600;
+  
 .video-container {
   display: none;
 }
