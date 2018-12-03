@@ -1,15 +1,20 @@
 .line {
-  &:after {
+  &::after {
   content: "";
   display: block;
-  margin: 20px 0;
   width: 50px;
   border: 1px solid $main-color-lightness;
   }
 
   &--center {
-    &:after {
+    &::after {
     margin: 30px auto 0;
+    }
+  }
+
+  &--left {
+    &::after {
+    margin: 20px 0;
     }
   }
 }
