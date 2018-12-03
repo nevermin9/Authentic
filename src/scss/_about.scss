@@ -1,16 +1,29 @@
 .about {
   display: flex;
   align-items: center;
-  padding: 100px;
+  padding: 60px 40px;
+
+  @include md {
+    padding: 60px 10vw;
+  }
 
   &__text {
-    margin-right: 50px;
+
+    @include lg {
+      margin-right: 50px;
+    }
   }
 
   &__img {
+    display: none;
+
+    @include lg {
+      display: block;
+    }
   }
 
   &__title {
+    font-weight: 900;
     text-transform: uppercase;
   }
 
