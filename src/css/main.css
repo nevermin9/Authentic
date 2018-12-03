@@ -23,7 +23,6 @@ body {
 }
 
 .button {
-  padding: 10px 15px;
   display: block;
   border: 2px solid #fff;
   text-decoration: none;
@@ -37,6 +36,7 @@ body {
   background-repeat: no-repeat;
   background-size: 0% 100%;
   transition: background-size .5s, color .5s;
+  padding: 10px 15px;
 }
 
 @media (min-width: 576px) {
@@ -497,7 +497,8 @@ body {
 
 .about__description--bold {
   font-weight: 600;
-  
+}
+
 .video-container {
   display: none;
 }
@@ -587,4 +588,47 @@ video[poster] {
 .vjs-poster {
   background-size: cover;
   background-position: center;
+}
+
+.hurry-up {
+  padding: 55px 0;
+  background: url(../img/content/purchase.png) center center no-repeat;
+  background-size: cover;
+}
+
+.hurry-up__wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 0 50px;
+}
+
+@media (min-width: 768px) {
+  .hurry-up__wrap {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 992px) {
+  .hurry-up__wrap {
+    padding: 0 100px;
+  }
+}
+
+.hurry-up__message {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .hurry-up__message {
+    margin-bottom: 0;
+    padding: 12px 10px 12px 0;
+  }
+}
+
+.hurry-up__signup {
+  font-size: 13px;
 }
