@@ -497,7 +497,8 @@ body {
 
 .about__description--bold {
   font-weight: 600;
-  
+}
+
 .video-container {
   display: none;
 }
@@ -506,6 +507,7 @@ body {
   .video-container {
     display: flex;
     justify-content: center;
+    padding: 40px 0;
   }
 }
 
@@ -516,7 +518,7 @@ body {
 @media (min-width: 576px) {
   .video-container__video {
     display: block;
-    width: 80vw;
+    width: 83vw;
     height: 40vw;
   }
 }
