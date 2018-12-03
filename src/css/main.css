@@ -497,7 +497,8 @@ body {
 
 .about__description--bold {
   font-weight: 600;
-  
+}
+
 .video-container {
   display: none;
 }
