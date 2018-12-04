@@ -1,0 +1,21 @@
+.social {
+  background-color: $bg-footer;
+  color: $text-color;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 20px;
+
+    &__items {
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    &__icon {
+      color: $text-color;
+      margin-left: 5px;
+
+      &::last-child {
+        margin-left: 0;
+      }; 
+    }
+}
