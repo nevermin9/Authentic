@@ -4,9 +4,10 @@
   <meta charset="utf-8">
   <title>Authentic</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet"> 
+  <link href="https://vjs.zencdn.net/7.3.0/video-js.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <section class="start">
@@ -20,12 +21,23 @@
         <a href="#" class="start__links-item button">purchase</a>
       </div>
     </div>
+  </section>  
+  <section class="about">
+    <div class="about__text">
+      <h2 class="about__title line line--left">about our project</h2>
+      <p class="about__description about__description--bold">We are here to make your dream comes true by your own way.</p>
+      <p class="about__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim augue.</p>
+      <p class="about__description">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis seacula quarta decima decima sollemnes in futurum.</p>
+    </div>
+    <div class="about__img">
+      <img src="img/content/section-two-man.png" alt="man">
+    </div>
   </section>
   <section class="advantages-video">
     <article class="advantages-video__info-items">
       <div class="info-item advantages-video__info-item">
         <div class="info-item__image">
-          <span class=" fas fa-microphone">
+          <span class="fas fa-microphone">
           </span>
         </div>
         <h2 class="info-item__headline">
@@ -72,6 +84,16 @@
         </p>
       </div>
     </article>
+    <figure class="video-container">
+      <video
+      preload="metadata"
+      poster="img/content/video_layer.png"
+      controls
+      data-setup="{}"
+      class="video-js vjs-default-skin video-container__video">
+      <source src="video/videoplayback.mp4" type="video/mp4">
+      </video>
+    </figure>
     <div class="brands">
       <div class="brands__block brands__block--first">
         <img src="img/content/brand-hendeson.png" alt="Logo" width="126" height="100">
@@ -93,8 +115,79 @@
       </div>
     </div>
   </section>
-  <section class="map">
-    <iframe class="map__item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.65346037929!2d30.509049431821584!3d50.44657768898716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce583e2351b3%3A0x5a6590ac85301c76!2z0J3QsNGG0ZbQvtC90LDQu9GM0L3QuNC5INCw0LrQsNC00LXQvNGW0YfQvdC40Lkg0YLQtdCw0YLRgCDQvtC_0LXRgNC4INGC0LAg0LHQsNC70LXRgtGDINCj0LrRgNCw0ZfQvdC4INGW0LwuINCiLiDQky4g0KjQtdCy0YfQtdC90LrQsA!5e0!3m2!1suk!2sua!4v1543820672674" allowfullscreen></iframe>
+  <section class="our-member">
+    <h2 class="our-member__headline line line--center">
+      our member
+    </h2>
+    <div class="our-member__men">
+      <figure class="our-member__cont">
+        <div class="our-member__cont-for-image">
+          <img class="our-member__image" src="img/content/man-1.jpg" alt="Masud Rana">
+        </div>
+        <figcaption class="our-member__descr">
+          <div class="our-member__name">
+           masud rana
+          </div>
+          <div class="our-member__position">
+            CEO from managment
+          </div>
+          <div class="our-member__contacts">
+            <a href="#" class="our-member__link-contact fab fa-facebook-f">
+            </a>
+            <a href="#" class="our-member__link-contact our-member__link-contact--blue fab fa-twitter">
+            </a>
+            <a href="#" class="our-member__link-contact fab fa-instagram">
+            </a>
+            <a href="#" class="our-member__link-contact fab fa-dribbble">
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="our-member__cont">
+        <div class="our-member__cont-for-image">
+          <img class="our-member__image" src="img/content/man-2.jpg" alt="Masud Rana">
+        </div>
+        <figcaption class="our-member__descr">
+          <div class="our-member__name">
+           masud rana
+         </div>
+         <div class="our-member__position">
+          CEO from managment
+        </div> 
+        <div class="our-member__contacts">
+          <a href="#" class="our-member__link-contact fab fa-facebook-f">
+          </a>
+          <a href="#" class="our-member__link-contact our-member__link-contact--blue fab fa-twitter">
+          </a>
+          <a href="#" class="our-member__link-contact fab fa-instagram">
+          </a>
+          <a href="#" class="our-member__link-contact fab fa-dribbble">
+          </a>
+        </div>
+      </figure>
+      <figure class="our-member__cont">
+        <div class="our-member__cont-for-image">
+          <img class="our-member__image" src="img/content/man-3.jpg" alt="Masud Rana">
+        </div>
+        <figcaption class="our-member__descr">
+          <div class="our-member__name">
+           masud rana
+         </div>
+         <div class="our-member__position">
+          CEO from managment
+        </div>
+        <div class="our-member__contacts">
+          <a href="#" class="our-member__link-contact fab fa-facebook-f">
+          </a>
+          <a href="#" class="our-member__link-contact our-member__link-contact--blue fab fa-twitter">
+          </a>
+          <a href="#" class="our-member__link-contact fab fa-instagram">
+          </a>
+          <a href="#" class="our-member__link-contact fab fa-dribbble">
+          </a>
+        </div>
+      </figure>
+    </div>
   </section>
   <section class="book-a-seat">
     <div class="book-a-seat__image"></div>
@@ -118,6 +211,10 @@
       </div>
     </div>    
   </section>
+  <section class="map">
+    <iframe class="map__item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.65346037929!2d30.509049431821584!3d50.44657768898716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce583e2351b3%3A0x5a6590ac85301c76!2z0J3QsNGG0ZbQvtC90LDQu9GM0L3QuNC5INCw0LrQsNC00LXQvNGW0YfQvdC40Lkg0YLQtdCw0YLRgCDQvtC_0LXRgNC4INGC0LAg0LHQsNC70LXRgtGDINCj0LrRgNCw0ZfQvdC4INGW0LwuINCiLiDQky4g0KjQtdCy0YfQtdC90LrQsA!5e0!3m2!1suk!2sua!4v1543820672674" allowfullscreen></iframe>
+  </section>
   <script src="js/timer.js"></script>
+  <script src="https://vjs.zencdn.net/7.3.0/video.js"></script>
 </body>
 </html>

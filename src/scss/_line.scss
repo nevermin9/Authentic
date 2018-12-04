@@ -5,7 +5,7 @@
   width: 50px;
   border: 1px solid $main-color-lightness;
 
-  @include sm {
+    @include sm {
       width: 60px;
     }
   }
@@ -18,7 +18,7 @@
 
   &--left {
      &::after {
-      margin-top: 20px;
+      margin: 25px 0;
     }
   }
 }

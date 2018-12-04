@@ -1,0 +1,37 @@
+.about {
+  display: flex;
+  align-items: center;
+  padding: 60px 40px;
+
+  @include md {
+    padding: 60px 10vw;
+  }
+
+  &__text {
+
+    @include lg {
+      margin-right: 50px;
+    }
+  }
+
+  &__img {
+    display: none;
+
+    @include lg {
+      display: block;
+    }
+  }
+
+  &__title {
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    padding: 10px 0;
+
+    &--bold {
+      font-weight: 600;
+    }
+  }
+}
