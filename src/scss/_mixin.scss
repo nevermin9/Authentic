@@ -52,3 +52,13 @@
 // end of media queries
 
 // animations
+
+//start
+@mixin text ($text-s, $letter-s) {
+  font-size: $text-s;
+  letter-spacing: $letter-s;
+}
+
+@mixin button-padding ($vertic, $horiz) {
+  padding: $vertic $horiz;
+}
