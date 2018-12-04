@@ -2,12 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Authentic</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
+  <section class="start">
+    <div class="start__wrapper">
+      <h1 class="start__heading">start your project</h1>
+      <p class="start__heading-paragraph line line--center">conference event day 2017</p>
+      <div id="timer" class="start__timer"></div>
+      <p class="start__timer-paragraph">days hours mins secs</p>
+      <div class="start__links">
+        <a href="#" class="start__links-item button">take a tour</a>
+        <a href="#" class="start__links-item button">purchase</a>
+      </div>
+    </div>
+  </section>
   <section class="advantages-video">
     <article class="advantages-video__info-items">
       <div class="info-item advantages-video__info-item">
@@ -80,5 +93,31 @@
       </div>
     </div>
   </section>
+  <section class="map">
+    <iframe class="map__item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.65346037929!2d30.509049431821584!3d50.44657768898716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce583e2351b3%3A0x5a6590ac85301c76!2z0J3QsNGG0ZbQvtC90LDQu9GM0L3QuNC5INCw0LrQsNC00LXQvNGW0YfQvdC40Lkg0YLQtdCw0YLRgCDQvtC_0LXRgNC4INGC0LAg0LHQsNC70LXRgtGDINCj0LrRgNCw0ZfQvdC4INGW0LwuINCiLiDQky4g0KjQtdCy0YfQtdC90LrQsA!5e0!3m2!1suk!2sua!4v1543820672674" allowfullscreen></iframe>
+  </section>
+  <section class="book-a-seat">
+    <div class="book-a-seat__image"></div>
+    <div class="book-a-seat__text-form">
+      <div class="book-a-seat__wrapper">
+        <h2 class="book-a-seat__title line line--left">book a seat now</h2>
+        <p class="book-a-seat__description">It is a long establish fact that a reader will be distracted by the readble content of a page when looking at its layout. The point of using Lorem Ipsum is that i</p>
+        <form class="book-a-seat__form form" action="#" method="post">
+          <div class="form__pair">
+            <input type="text" name="firstname" id="firstname" placeholder="Your name *" class="form__field form__field--half" required>        
+            <input type="email" name="email" id="email" placeholder="Your email *" class="form__field form__field--half" required>
+          </div>
+          <div>
+            <input type="text" name="subject" id="subject" placeholder="Subject *" class="form__field" required>
+          </div>
+          <textarea rows="4" placeholder="Message *" name="message" id="message" class="form__field"></textarea>
+          <div>
+            <input type="submit" value="SEND MESSAGE" name="submit" id="submit" class="form__send-message button button--small">
+          </div>    
+        </form>
+      </div>
+    </div>    
+  </section>
+  <script src="js/timer.js"></script>
 </body>
 </html>

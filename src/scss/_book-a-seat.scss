@@ -1,0 +1,60 @@
+.book-a-seat {
+  display: flex;
+  background-color: $bg-grey;
+
+  &__text-form {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  &__wrapper {
+    padding: 50px 30px;
+
+      @include md {
+          padding: 80px 40px;
+      }
+
+      @include lg {
+          padding: 100px 80px 80px;
+      }
+
+      @include xl {
+          padding: 120px 100px 100px;
+      }
+  }
+
+  &__image {    
+    background-image: url("../img/content/book-seat.jpg");
+    flex-basis: 0;
+    flex-grow: 0;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+      
+      @include sm {
+        flex-grow: 1; 
+      }
+  }
+
+  &__title {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 26px;
+    line-height: 21px;
+
+      @include md {
+        font-size: 32px;
+      }
+  }
+
+  &__description {
+    margin-top: 25px;
+    font-size: 14px;
+    line-height: 24px;
+    color: $text-color;
+
+      @include md {
+        font-size: 16px;
+      }
+  }
+}

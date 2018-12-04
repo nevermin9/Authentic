@@ -1,0 +1,24 @@
+.map {  
+  &__item {
+    display: block;
+    border: 0;
+    frameborder: 0;
+    @include width-height (100%, 400px);
+    
+      @include sm {
+        @include width-height (100%, 500px);
+      }
+
+      @include md {
+        @include width-height (100%, 700px);
+      }
+
+      @include lg {
+        @include width-height (100%, 800px);
+      }
+
+      @include xl {
+        @include width-height (100%, 900px);
+      }
+  }
+}
