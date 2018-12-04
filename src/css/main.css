@@ -22,6 +22,12 @@ body {
   font-family: "Open Sans", "Arial", sans-serif;
 }
 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .button {
   padding: 10px 15px;
   display: block;
@@ -365,7 +371,7 @@ body {
 }
 
 .brands__block {
-  margin: auto;
+  margin: 0 auto;
   width: 70%;
   padding: 40px 0;
   border-bottom: 1px dashed #eaeaea;
@@ -726,4 +732,124 @@ video[poster] {
 
 .our-member__link-contact--blue {
   color: #03a9f4;
+}
+
+.schedule {
+  padding: 100px;
+}
+
+.schedule__input {
+  display: none;
+}
+
+.schedule__title {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.schedule__days-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.schedule__label {
+  padding: 10px 30px;
+  border: 1px solid #ccc;
+  text-transform: uppercase;
+  transition: all .3s linear;
+}
+
+.schedule__label:hover {
+  cursor: pointer;
+  background-color: #03a9f4;
+  color: #fff;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  animation: line;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+  border-right: 1px solid #ccc;
+}
+
+.timeline__container {
+  position: relative;
+}
+
+.timeline__article {
+  float: left;
+  width: 40%;
+  padding: 15px;
+  background: #ccc;
+}
+
+.timeline__article--right {
+  float: right;
+}
+
+.timeline__img {
+  width: 100%;
+}
+
+.timeline__mini-photo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: url(../img/content/speakers-1.png) center center no-repeat;
+}
+
+@keyframes line {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.schedule__input--day-one:checked ~ .timeline--day-one {
+  display: block;
+}
+
+.schedule__input--day-one:checked ~ .timeline--day-two {
+  display: none;
+}
+
+.schedule__input--day-one:checked ~ .timeline--day-three {
+  display: none;
+}
+
+.schedule__input--day-two:checked ~ .timeline--day-one {
+  display: none;
+}
+
+.schedule__input--day-two:checked ~ .timeline--day-two {
+  display: block;
+}
+
+.schedule__input--day-two:checked ~ .timeline--day-three {
+  display: none;
+}
+
+.schedule__input--day-three:checked ~ .timeline--day-one {
+  display: none;
+}
+
+.schedule__input--day-three:checked ~ .timeline--day-two {
+  display: none;
+}
+
+.schedule__input--day-three:checked ~ .timeline--day-three {
+  display: block;
 }

@@ -13,3 +13,11 @@ img {
 body {
   font-family: $font-stack;
 }
+
+.clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

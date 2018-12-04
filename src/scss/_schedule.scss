@@ -1,0 +1,30 @@
+.schedule {
+  padding: 100px;
+
+  &__input {
+    display: none;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__days-container {
+    padding: 40px;
+    text-align: center;
+  }
+
+  &__label {
+    padding: 10px 30px;
+    border: 1px solid #ccc;
+    text-transform: uppercase;
+    transition: all .3s linear;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $main-color;
+      color: #fff;
+    }
+  }
+}
