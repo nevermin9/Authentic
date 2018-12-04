@@ -739,18 +739,30 @@ video[poster] {
   flex-direction: column;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 510px) {
   .additional__wrapper {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 50px 30px 50px 50px;
+  }
+}
+
+@media (min-width: 800px) {
+  .additional__wrapper {
+    padding: 50px 110px;
+  }
+}
+
+@media (min-width: 966px) {
+  .additional__wrapper {
+    padding: 50px 30px;
   }
 }
 
 .additional__contacts {
-  flex-grow: 1;
   flex-basis: 0;
-  max-width: 300px;
+  min-width: 300px;
 }
 
 @media (min-width: 500px) {
@@ -759,35 +771,24 @@ video[poster] {
   }
 }
 
-@media (min-width: 992px) {
-  .additional__contacts {
-    padding: 0 20px 0 50px;
-  }
-}
-
 .additional__support {
   margin-top: 20px;
-  flex-grow: 1;
+  flex-grow: 0;
   flex-basis: 0;
+  min-width: 150px;
 }
 
 @media (min-width: 500px) {
   .additional__support {
     margin-top: 0;
-  }
-}
-
-@media (min-width: 500px) {
-  .additional__support {
     order: 2;
   }
 }
 
 .additional__information {
   margin-top: 20px;
-  flex-grow: 1;
   flex-basis: 0;
-  max-width: 300px;
+  min-width: 150px;
 }
 
 @media (min-width: 500px) {
@@ -796,9 +797,10 @@ video[poster] {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 966px) {
   .additional__information {
     margin-top: 0;
+    order: 3;
   }
 }
 
@@ -806,17 +808,20 @@ video[poster] {
   margin-top: 20px;
   flex-grow: 1;
   flex-basis: 0;
+  min-width: 300px;
 }
 
 @media (min-width: 500px) {
   .additional__newsletter {
-    order: 4;
+    order: 3;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 966px) {
   .additional__newsletter {
     margin-top: 0;
+    flex-grow: 0;
+    order: 4;
   }
 }
 
@@ -903,14 +908,40 @@ video[poster] {
   padding: 20px;
 }
 
+@media (min-width: 576px) {
+  .social {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 420px) {
+  .social {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .social__items {
   text-align: right;
   margin-top: 10px;
 }
 
+@media (min-width: 420px) {
+  .social__items {
+    margin-top: 0;
+  }
+}
+
 .social__icon {
   color: #666666;
   margin-left: 5px;
+}
+
+@media (min-width: 576px) {
+  .social__icon {
+    margin-left: 15px;
+    font-size: 20px;
+  }
 }
 
 .social__icon::last-child {
