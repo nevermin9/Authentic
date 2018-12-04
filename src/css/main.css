@@ -746,6 +746,7 @@ video[poster] {
   position: relative;
   background-color: #f8f8f8;
   padding: 100px 10vw;
+  text-align: center;
 }
 
 .timeline__title {
@@ -783,9 +784,11 @@ video[poster] {
 .timeline__day::before {
   content: '';
   position: absolute;
-  width: 50%;
-  height: 100%;
-  border-right: 1px solid #dcdcdc;
+  width: 1px;
+  top: -50px;
+  left: 50%;
+  height: calc(100% + 100px);
+  background: #dcdcdc;
 }
 
 .timeline__container {
@@ -810,45 +813,99 @@ video[poster] {
 .timeline__mini-photo {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 40%;
   transform: translate(-50%, -50%);
   width: 100px;
   height: 100px;
+}
+
+.timeline__mini-photo--day-one {
   background: url(../img/content/speakers-1.png) center center no-repeat;
 }
 
+.timeline__mini-photo--day-two {
+  background: url(../img/content/speakers-2.png) center center no-repeat;
+}
+
+.timeline__mini-photo--day-three {
+  background: url(../img/content/speakers-3.png) center center no-repeat;
+}
+
+.timeline__bottom-btn {
+  position: relative;
+}
+
+.timeline__input--day-one:checked ~ .timeline__label-box .timeline__label--day-one {
+  background-color: #03a9f4;
+  color: #fff;
+}
+
 .timeline__input--day-one:checked ~ .timeline__day--one {
-  display: none;
-}
-
-.timeline__input--day-one:checked ~ .timeline--day-two {
-  display: none;
-}
-
-.timeline__input--day-one:checked ~ .timeline--day-three {
-  display: none;
-}
-
-.timeline__input--day-two:checked ~ .timeline--day-one {
-  display: none;
-}
-
-.timeline__input--day-two:checked ~ .timeline--day-two {
   display: block;
 }
 
-.timeline__input--day-two:checked ~ .timeline--day-three {
+.timeline__input--day-one:checked ~ .timeline__day--two {
   display: none;
 }
 
-.timeline__input--day-three:checked ~ .timeline--day-one {
+.timeline__input--day-one:checked ~ .timeline__day--three {
   display: none;
 }
 
-.timeline__input--day-three:checked ~ .timeline--day-two {
+.timeline__input--day-one:checked ~ .timeline__bottom-btn--day-one {
   display: none;
 }
 
-.timeline__input--day-three:checked ~ .timeline--day-three {
+.timeline__input--day-one:checked ~ .timeline__bottom-btn--day-three {
+  display: none;
+}
+
+.timeline__input--day-two:checked ~ .timeline__label-box .timeline__label--day-two {
+  background-color: #03a9f4;
+  color: #fff;
+}
+
+.timeline__input--day-two:checked ~ .timeline__day--one {
+  display: none;
+}
+
+.timeline__input--day-two:checked ~ .timeline__day--two {
   display: block;
+}
+
+.timeline__input--day-two:checked ~ .timeline__day--three {
+  display: none;
+}
+
+.timeline__input--day-two:checked ~ .timeline__bottom-btn--day-one {
+  display: none;
+}
+
+.timeline__input--day-two:checked ~ .timeline__bottom-btn--day-two {
+  display: none;
+}
+
+.timeline__input--day-three:checked ~ .timeline__label-box .timeline__label--day-three {
+  background-color: #03a9f4;
+  color: #fff;
+}
+
+.timeline__input--day-three:checked ~ .timeline__day--one {
+  display: none;
+}
+
+.timeline__input--day-three:checked ~ .timeline__day--two {
+  display: none;
+}
+
+.timeline__input--day-three:checked ~ .timeline__day--three {
+  display: block;
+}
+
+.timeline__input--day-three:checked ~ .timeline__bottom-btn--day-two {
+  display: none;
+}
+
+.timeline__input--day-three:checked ~ .timeline__bottom-btn--day-three {
+  display: none;
 }
