@@ -4,17 +4,21 @@
   display: block;
   width: 50px;
   border: 1px solid $main-color-lightness;
+
+    @include sm {
+      width: 60px;
+    }
   }
 
   &--center {
     &::after {
-    margin: 30px auto 0;
+      margin: 30px auto 0;
     }
   }
 
   &--left {
-    &::after {
-    margin: 20px 0;
+     &::after {
+      margin: 25px 0;
     }
   }
 }
