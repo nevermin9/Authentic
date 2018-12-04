@@ -14,16 +14,27 @@
   transition: background-size .5s, color .5s;
   @include button-padding(10px,15px);
 
+  &--small{
+    font-size: 14px;
+    border: 2px solid $main-color;
+    @include button-padding(10px,15px);
+    color: $main-color;
+    
+    &:hover {
+      color:$text-start; 
+    }
+  }
+
   @include sm {
-        @include button-padding(15px,30px);
+    @include button-padding(15px,30px);
   }
   
   @include lg {
-        @include button-padding(15px,50px);
+    @include button-padding(15px,50px);
   }
 
-    &:hover {
-      background-size: 100% 100%;
-      border-color: $main-color;
-    }
+  &:hover {
+    background-size: 100% 100%;
+    border-color: $main-color;
+  }
 }
