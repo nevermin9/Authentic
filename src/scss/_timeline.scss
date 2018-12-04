@@ -1,3 +1,5 @@
+/*timeline style*/
+
 .timeline {
   position: relative;
   background-color: $tl-bg-color;
@@ -14,22 +16,12 @@
     }
 
     &__label-box {
-      padding: 20px;
-      margin: 40px;
+      padding: 50px 0 20px 0;
       text-align: center;
     }
 
     &__label {
-      padding: 10px 30px;
-      border: 1px solid $tl-line-color;
-      text-transform: uppercase;
-      transition: all .3s linear;
-
-      &:hover {
-        cursor: pointer;
-        background-color: $main-color;
-        color: #fff;
-      }
+      display: inline-block;
     }
 
     &__day {
@@ -38,9 +30,9 @@
         content: '';
         position: absolute;
         width: 1px;
-        top: -50px;
+        top: -20px;
         left: 50%;
-        height: calc(100% + 100px);
+        height: calc(100% + 70px);
         background: $tl-line-color;
       }
     }
@@ -50,13 +42,58 @@
     }
 
     &__article {
+      position: relative;
       float: left;
       width: 40%;
       padding: 15px;
       background: #fff;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: -51px;
+        width: 180px;;
+        transform: rotate(-45deg);
+        border: 35px solid transparent;
+        border-bottom: 35px solid $main-color;
+      }
 
       &--right {
         float: right;
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: auto;
+          right: -35px;
+          width: 180px;;
+          transform: rotate(45deg);
+          border: 25px solid transparent;
+          border-bottom: 25px solid $main-color;
+        }
+      }
+    }
+
+    &__time {
+      position: absolute;
+      transform: rotate(-45deg);
+      text-transform: uppercase;
+      color: #fff;
+      width: 200px;
+      top: 39px;
+      z-index: 1;
+      left: -47px;
+
+      &--right {
+        position: absolute;
+        transform: rotate(45deg);
+        text-transform: uppercase;
+        color: #fff;
+        width: 200px;
+        top: 20px;
+        z-index: 1;
+        right: -46px;
+        left: auto;
       }
     }
 
@@ -85,11 +122,15 @@
     }
 
     &__bottom-btn {
+      margin-top: 50px;
       position: relative;
-
+      display: inline-block;
     }
 }
 
+/*timeline style end*/
+
+/*timeline logic*/
 .timeline {
 
   &__input {
@@ -109,6 +150,7 @@
                 &--day-one {
                   background-color: $main-color;
                   color: #fff;
+                  border: 2px solid $main-color;
                 }
               }
             }
@@ -159,6 +201,7 @@
                 &--day-two {
                   background-color: $main-color;
                   color: #fff;
+                  border: 2px solid $main-color;
                 }
               }
             }
@@ -208,6 +251,7 @@
                 &--day-three {
                   background-color: $main-color;
                   color: #fff;
+                  border: 2px solid $main-color;
                 }
               }
             }

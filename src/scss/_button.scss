@@ -1,10 +1,10 @@
 .button {
   @include button-padding(10px,15px);
   display: block;
-  border: 2px solid $text-start; 
+  border: 2px solid $text-start;
   text-decoration: none;
   text-transform: uppercase;
-  color: $text-start; 
+  color: $text-start;
   font-size: 18px;
   text-align: center;
   cursor: pointer;
@@ -19,16 +19,27 @@
     border: 2px solid $main-color;
     @include button-padding(10px,15px);
     color: $main-color;
-    
+
     &:hover {
-      color:$text-start; 
+      color:$text-start;
+    }
+  }
+
+  &--timeline {
+    font-size: 14px;
+    border: 2px solid $tl-line-color;
+    color: $text-color;
+    @include button-padding(10px,15px);
+
+    &:hover {
+      color:$text-start;
     }
   }
 
   @include sm {
     @include button-padding(15px,30px);
   }
-  
+
   @include lg {
     @include button-padding(15px,50px);
   }
