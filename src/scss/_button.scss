@@ -1,5 +1,4 @@
 .button {
-  @include button-padding(10px,15px);
   display: block;
   border: 2px solid $text-start;
   text-decoration: none;
@@ -13,6 +12,7 @@
   background-repeat: no-repeat;
   background-size: 0% 100%;
   transition: background-size .5s, color .5s;
+  @include button-padding(10px,15px);
 
   &--small{
     font-size: 14px;
