@@ -926,12 +926,25 @@ video[poster] {
 }
 
 .timeline__label-box {
-  padding: 50px 0 20px 0;
+  max-width: 70%;
+  margin: auto;
+  padding: 50px 0;
   text-align: center;
 }
 
 .timeline__label {
-  display: inline-block;
+  display: block;
+}
+
+.timeline__label:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 576px) {
+  .timeline__label {
+    display: inline-block;
+    margin-bottom: 0;
+  }
 }
 
 .timeline__day {
@@ -942,10 +955,30 @@ video[poster] {
   content: '';
   position: absolute;
   width: 1px;
-  top: -20px;
+  top: -60px;
   left: 50%;
-  height: calc(100% + 70px);
+  height: calc(100% + 110px);
   background: #dcdcdc;
+  animation-name: line;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@media (min-width: 768px) {
+  .timeline__day::before {
+    left: 95%;
+    top: 15%;
+    height: 65%;
+  }
+}
+
+@media (min-width: 992px) {
+  .timeline__day::before {
+    top: -60px;
+    left: 50%;
+    height: calc(100% + 110px);
+  }
 }
 
 .timeline__container {
@@ -954,10 +987,23 @@ video[poster] {
 
 .timeline__article {
   position: relative;
-  float: left;
-  width: 40%;
+  margin: 25px 0;
   padding: 15px;
   background: #fff;
+}
+
+@media (min-width: 768px) {
+  .timeline__article {
+    float: left;
+    width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  .timeline__article {
+    width: 40%;
+    margin: 0;
+  }
 }
 
 .timeline__article::after {
@@ -971,20 +1017,56 @@ video[poster] {
   border-bottom: 35px solid #03a9f4;
 }
 
-.timeline__article--right {
-  float: right;
+@media (min-width: 768px) {
+  .timeline__article--right {
+    float: left;
+  }
+}
+
+@media (min-width: 992px) {
+  .timeline__article--right {
+    float: right;
+  }
 }
 
 .timeline__article--right::after {
-  content: '';
-  position: absolute;
-  top: 0;
+  top: 4px;
   left: auto;
-  right: -35px;
-  width: 180px;
+  right: -51px;
   transform: rotate(45deg);
-  border: 25px solid transparent;
-  border-bottom: 25px solid #03a9f4;
+}
+
+.timeline__article-img {
+  width: 100%;
+}
+
+.timeline__article-title {
+  text-align: left;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+.timeline__article-text {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.timeline__article--one {
+  animation-name: article-one;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.timeline__article--two {
+  animation-name: article-two;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.timeline__article--three {
+  animation-name: article-three;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
 }
 
 .timeline__time {
@@ -999,46 +1081,59 @@ video[poster] {
 }
 
 .timeline__time--right {
-  position: absolute;
   transform: rotate(45deg);
-  text-transform: uppercase;
-  color: #fff;
-  width: 200px;
-  top: 20px;
-  z-index: 1;
-  right: -46px;
+  top: 38px;
+  right: -48px;
   left: auto;
 }
 
-.timeline__article-img {
-  width: 100%;
-}
-
 .timeline__mini-photo {
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  margin: auto;
   width: 100px;
   height: 100px;
 }
 
+@media (min-width: 768px) {
+  .timeline__mini-photo {
+    position: absolute;
+    top: 40%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: 992px) {
+  .timeline__mini-photo {
+    left: 50%;
+  }
+}
+
 .timeline__mini-photo--day-one {
+  animation-name: miniphoto-one;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
   background: url(../img/content/speakers-1.png) center center no-repeat;
 }
 
 .timeline__mini-photo--day-two {
+  animation-name: miniphoto-two;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
   background: url(../img/content/speakers-2.png) center center no-repeat;
 }
 
 .timeline__mini-photo--day-three {
+  animation-name: miniphoto-three;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
   background: url(../img/content/speakers-3.png) center center no-repeat;
 }
 
 .timeline__bottom-btn {
-  margin-top: 50px;
   position: relative;
   display: inline-block;
+  margin-top: 50px;
 }
 
 /*timeline style end*/
@@ -1119,6 +1214,47 @@ video[poster] {
 
 .timeline__input--day-three:checked ~ .timeline__bottom-btn--day-three {
   display: none;
+}
+
+/*timeline logic end*/
+/*timeline animation*/
+@keyframes line {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes miniphoto-one {
+  0% {
+    height: 0;
+  }
+  30% {
+    height: 0;
+  }
+  80% {
+    height: 110px;
+  }
+  100% {
+    height: 100px;
+  }
+}
+
+@keyframes article-one {
+  0% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .book-a-seat {
