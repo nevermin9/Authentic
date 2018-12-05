@@ -3,10 +3,10 @@
   color: $text-color;
   font-size: 12px;
   font-weight: bold;
-  padding: 20px;
+  padding: 20px 30px;
 
     @include sm {
-      font-size: 16px;
+      font-size: 14px;
     }
 
     @include rwd(420) {

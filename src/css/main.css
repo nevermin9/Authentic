@@ -905,12 +905,12 @@ video[poster] {
   color: #666666;
   font-size: 12px;
   font-weight: bold;
-  padding: 20px;
+  padding: 20px 30px;
 }
 
 @media (min-width: 576px) {
   .social {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
