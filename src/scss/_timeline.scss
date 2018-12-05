@@ -45,7 +45,7 @@
         height: calc(100% + 110px);
         background: $tl-line-color;
         animation-name: line;
-        animation-duration: 5s;
+        animation-duration: 4s;
         animation-iteration-count: 1;
         animation-timing-function: linear;
 
@@ -128,20 +128,26 @@
 
       &--one {
         animation-name: article-one;
-        animation-duration: 2s;
+        animation-duration: 1.5s;
+        animation-delay: 0.9s;
         animation-iteration-count: 1;
+        animation-fill-mode: backwards;
       }
 
       &--two {
         animation-name: article-two;
-        animation-duration: 2s;
+        animation-duration: 1.5s;
+        animation-delay: 2s;
         animation-iteration-count: 1;
+        animation-fill-mode: backwards;
       }
 
       &--three {
         animation-name: article-three;
-        animation-duration: 2s;
+        animation-duration: 1.5s;
+        animation-delay: 3.4s;
         animation-iteration-count: 1;
+        animation-fill-mode: backwards;
       }
     }
 
@@ -179,24 +185,62 @@
         left: 50%;
       }
 
-      &--day-one {
+      &--animation-one {
         animation-name: miniphoto-one;
         animation-duration: 2s;
         animation-iteration-count: 1;
+        animation-delay: 0.5s;
+        animation-fill-mode: backwards;
+        @include md {
+          animation-delay: 0s;
+        }
+
+        @include lg {
+          animation-delay: 0.5s;
+        }
+      }
+
+      &--animation-two {
+        animation-name: miniphoto-two;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-delay: 1.6s;
+        animation-fill-mode: backwards;
+
+        @include md {
+          animation-delay: 1.7s;
+        }
+
+        @include lg {
+          animation-delay: 1.6s;
+        }
+      }
+
+      &--animation-three {
+        animation-name: miniphoto-three;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-delay: 3.1s;
+        animation-fill-mode: backwards;
+
+        @include md {
+          animation-delay: 3.3s;
+        }
+
+        @include md {
+          animation-delay: 3.1s;
+        }
+      }
+
+      &--day-one {
         background: url(../img/content/speakers-1.png) center center no-repeat;
       }
 
       &--day-two {
-        animation-name: miniphoto-two;
-        animation-duration: 2s;
-        animation-iteration-count: 1;
         background: url(../img/content/speakers-2.png) center center no-repeat;
       }
 
       &--day-three {
-        animation-name: miniphoto-three;
-        animation-duration: 2s;
-        animation-iteration-count: 1;
         background: url(../img/content/speakers-3.png) center center no-repeat;
       }
     }
@@ -370,6 +414,7 @@
 /*timeline logic end*/
 /*timeline animation*/
 @keyframes line {
+
   0% {
     height: 0;
   }
@@ -380,29 +425,8 @@
 }
 
 @keyframes miniphoto-one {
+
   0% {
-    height: 0;
-  }
-
-  30% {
-    height: 0;
-  }
-
-  80% {
-    height: 110px;
-  }
-
-  100% {
-    height: 100px;
-  }
-}
-
-@keyframes article-one {
-  0% {
-    transform: scale(0);
-  }
-
-  40% {
     transform: scale(0);
   }
 
@@ -412,5 +436,197 @@
 
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes miniphoto-two {
+
+  0% {
+    transform: scale(0);
+  }
+
+  80% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes miniphoto-three {
+
+  0% {
+    transform: scale(0);
+  }
+
+  80% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes article-one {
+
+  0% {
+    transform: translate(0,-50%) scale(0);
+  }
+
+  80% {
+    transform: translate(0,0) scale(1.1);
+  }
+
+  100% {
+    transform:  translate(0,0) scale(1);
+  }
+}
+
+@keyframes article-two {
+
+  0% {
+    transform: translate(0,-50%) scale(0);
+  }
+
+  80% {
+    transform: translate(0,0) scale(1.1);
+  }
+
+  100% {
+    transform:  translate(0,0) scale(1);
+  }
+}
+
+@keyframes article-three {
+
+  0% {
+    transform: translate(0,-50%) scale(0);
+  }
+
+  80% {
+    transform: translate(0,0) scale(1.1);
+  }
+
+  100% {
+    transform:  translate(0,0) scale(1);
+  }
+}
+
+@include md {
+
+  @keyframes line {
+
+    0% {
+      height: 0%;
+    }
+
+    100% {
+      height: 70%;
+    }
+  }
+
+  @keyframes miniphoto-one {
+
+    0% {
+      transform: translate(-50%,-50%) scale(0);
+    }
+
+    80% {
+      transform: translate(-50%,-50%) scale(1.1);
+    }
+
+    100% {
+      transform: translate(-50%,-50%) scale(1);
+    }
+  }
+
+  @keyframes miniphoto-two {
+
+    0% {
+      transform: translate(-50%,-50%) scale(0);
+    }
+
+    80% {
+      transform: translate(-50%,-50%) scale(1.1);
+    }
+
+    100% {
+      transform: translate(-50%,-50%) scale(1);
+    }
+  }
+
+  @keyframes miniphoto-three {
+
+    0% {
+      transform: translate(-50%,-50%) scale(0);
+    }
+
+    80% {
+      transform: translate(-50%,-50%) scale(1.1);
+    }
+
+    100% {
+      transform: translate(-50%,-50%) scale(1);
+    }
+  }
+
+  @keyframes article-one {
+
+    0% {
+      transform: translate(70%,-10%) scale(0);
+    }
+
+    80% {
+      transform: translate(0,0) scale(1.1);
+    }
+
+    100% {
+      transform:  translate(0,0) scale(1);
+    }
+  }
+
+  @keyframes article-two {
+
+    0% {
+      transform: translate(70%,-10%) scale(0);
+    }
+  }
+
+  @keyframes article-three {
+
+    0% {
+      transform: translate(70%,-10%) scale(0);
+    }
+
+    80% {
+      transform: translate(0,0) scale(1.1);
+    }
+
+    100% {
+      transform:  translate(0,0) scale(1);
+    }
+  }
+}
+
+@include lg {
+
+  @keyframes line {
+
+    0% {
+      height: 0%;
+    }
+
+    100% {
+      height: 100%;
+    }
+  }
+
+  @keyframes article-two {
+
+    0% {
+      transform: translate(-70%,-10%) scale(0);
+    }
   }
 }
