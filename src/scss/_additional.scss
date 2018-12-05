@@ -7,20 +7,20 @@
     color: $text-color;
     flex-direction: column;
 
-    @include rwd(510) {
-      flex-direction: row;
-      flex-wrap: wrap; 
-      justify-content: space-between;
-      padding: 50px 30px 50px 50px;  
-    }
+      @include rwd(510) {
+        flex-direction: row;
+        flex-wrap: wrap; 
+        justify-content: space-between;
+        padding: 50px 30px 50px 50px;  
+      }
 
-    @include rwd(800) {
-      padding: 50px 110px;  
-    }
-    
-    @include rwd(966) {
-      padding: 50px 30px;
-    }
+      @include rwd(800) {
+        padding: 50px 110px;  
+      }
+      
+      @include rwd(966) {
+        padding: 50px 30px;
+      }
   }
 
   &__contacts {
@@ -38,10 +38,10 @@
     flex-basis: 0;
     min-width: 150px;    
 
-    @include rwd(500) {
-      margin-top: 0;
-      order: 2;
-    }
+      @include rwd(500) {
+        margin-top: 0;
+        order: 2;
+      }
   }
 
   &__information {
@@ -49,14 +49,14 @@
     flex-basis: 0;
     min-width: 150px;    
 
-    @include rwd(500) {
+      @include rwd(500) {
         order: 4;
       }
 
-    @include rwd (966) {
-      margin-top: 0;      
-      order: 3;
-    }
+      @include rwd (966) {
+        margin-top: 0;      
+        order: 3;
+      }
   }
 
   &__newsletter {
@@ -90,6 +90,7 @@
   }
   
   &__list {
+    
     &-item {
       list-style-type: none;
       margin-bottom: 10px;
