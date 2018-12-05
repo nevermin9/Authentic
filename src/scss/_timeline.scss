@@ -1,0 +1,632 @@
+/*timeline style*/
+
+.timeline {
+  position: relative;
+  background-color: $tl-bg-color;
+  padding: 100px 10vw;
+  text-align: center;
+
+    &__title {
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &__input {
+      display: none;
+    }
+
+    &__label-box {
+      max-width: 70%;
+      margin: auto;
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    &__label {
+      display: block;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      @include sm {
+        display: inline-block;
+        margin-bottom: 0;
+      }
+    }
+
+    &__day {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        top: -60px;
+        left: 50%;
+        height: calc(100% + 110px);
+        background: $tl-line-color;
+        animation-name: line;
+        animation-duration: 4s;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+
+        @include md {
+          left: 95%;
+          top: 15%;
+          height: 65%;
+        }
+
+        @include lg {
+          top: -60px;
+          left: 50%;
+          height: calc(100% + 110px);
+        }
+      }
+    }
+
+    &__container {
+      position: relative;
+    }
+
+    &__article {
+      position: relative;
+      margin: 25px 0;
+      padding: 15px;
+      background: $text-start;
+
+      @include md {
+        float: left;
+        width: 80%;
+      }
+
+      @include lg {
+        width: 40%;
+        margin: 0;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: -51px;
+        width: 180px;;
+        transform: rotate(-45deg);
+        border: 35px solid transparent;
+        border-bottom: 35px solid $main-color;
+      }
+
+      &--right {
+
+        @include md {
+          float: left;
+        }
+
+        @include lg {
+          float: right;
+        }
+        &::after {
+          top: 4px;
+          left: auto;
+          right: -51px;
+          transform: rotate(45deg);
+        }
+      }
+
+      &-img {
+        width: 100%;
+      }
+
+      &-title {
+        text-align: left;
+        margin: 20px 0;
+        text-transform: uppercase;
+      }
+
+      &-text {
+        text-align: left;
+        margin-bottom: 20px;
+      }
+
+      &--one {
+        animation-name: article-one;
+        animation-duration: 1.5s;
+        animation-delay: 0.9s;
+        animation-iteration-count: 1;
+        animation-fill-mode: backwards;
+      }
+
+      &--two {
+        animation-name: article-two;
+        animation-duration: 1.5s;
+        animation-delay: 2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: backwards;
+      }
+
+      &--three {
+        animation-name: article-three;
+        animation-duration: 1.5s;
+        animation-delay: 3.4s;
+        animation-iteration-count: 1;
+        animation-fill-mode: backwards;
+      }
+    }
+
+    &__time {
+      position: absolute;
+      transform: rotate(-45deg);
+      text-transform: uppercase;
+      color: $text-start;
+      width: 200px;
+      top: 39px;
+      z-index: 1;
+      left: -47px;
+
+      &--right {
+        transform: rotate(45deg);
+        top: 38px;
+        right: -48px;
+        left: auto;
+      }
+    }
+
+    &__mini-photo {
+      position: relative;
+      margin: auto;
+      @include width-height(100px,100px)
+
+      @include md {
+        position: absolute;
+        top: 40%;
+        left: 95%;
+        transform: translate(-50%, -50%);
+      }
+
+      @include lg {
+        left: 50%;
+      }
+
+      &--animation-one {
+        animation-name: miniphoto-one;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-delay: 0.5s;
+        animation-fill-mode: backwards;
+        @include md {
+          animation-delay: 0s;
+        }
+
+        @include lg {
+          animation-delay: 0.5s;
+        }
+      }
+
+      &--animation-two {
+        animation-name: miniphoto-two;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-delay: 1.6s;
+        animation-fill-mode: backwards;
+
+        @include md {
+          animation-delay: 1.7s;
+        }
+
+        @include lg {
+          animation-delay: 1.6s;
+        }
+      }
+
+      &--animation-three {
+        animation-name: miniphoto-three;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        animation-delay: 3.1s;
+        animation-fill-mode: backwards;
+
+        @include md {
+          animation-delay: 3.3s;
+        }
+
+        @include md {
+          animation-delay: 3.1s;
+        }
+      }
+
+      &--day-one {
+        background: url(../img/content/speakers-1.png) center center no-repeat;
+      }
+
+      &--day-two {
+        background: url(../img/content/speakers-2.png) center center no-repeat;
+      }
+
+      &--day-three {
+        background: url(../img/content/speakers-3.png) center center no-repeat;
+      }
+    }
+
+    &__bottom-btn {
+      position: relative;
+      display: inline-block;
+      margin-top: 50px;
+    }
+}
+
+/*timeline style end*/
+/*timeline logic*/
+.timeline {
+
+  &__input {
+
+    &--day-one {
+
+      &:checked {
+
+        & ~ .timeline {
+
+          &__label-box {
+
+            & .timeline {
+
+              &__label {
+
+                &--day-one {
+                  background-color: $main-color;
+                  color: $text-start;
+                  border: 2px solid $main-color;
+                }
+              }
+            }
+          }
+
+          &__day {
+
+            &--one {
+              display: block;
+            }
+
+            &--two {
+              display: none;
+            }
+
+            &--three {
+              display: none;
+            }
+          }
+
+
+          &__bottom-btn {
+
+            &--day-one {
+              display: none;
+            }
+
+            &--day-three {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    &--day-two {
+
+      &:checked {
+
+        & ~ .timeline {
+
+          &__label-box {
+
+            & .timeline {
+
+              &__label {
+
+                &--day-two {
+                  background-color: $main-color;
+                  color: $text-start;
+                  border: 2px solid $main-color;
+                }
+              }
+            }
+          }
+
+          &__day {
+
+            &--one {
+              display: none;
+            }
+
+            &--two {
+              display: block;
+            }
+
+            &--three {
+              display: none;
+            }
+          }
+
+          &__bottom-btn {
+
+            &--day-one {
+              display: none;
+            }
+
+            &--day-two {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    &--day-three {
+
+      &:checked {
+
+        & ~ .timeline {
+
+          &__label-box {
+
+            & .timeline {
+
+              &__label {
+
+                &--day-three {
+                  background-color: $main-color;
+                  color: $text-start;
+                  border: 2px solid $main-color;
+                }
+              }
+            }
+          }
+
+          &__day {
+
+            &--one {
+              display: none;
+            }
+
+            &--two {
+              display: none;
+            }
+
+            &--three {
+              display: block;
+            }
+          }
+
+          &__bottom-btn {
+
+            &--day-two {
+              display: none;
+            }
+
+            &--day-three {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*timeline logic end*/
+/*timeline animation*/
+@keyframes line {
+
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes miniphoto-one {
+
+  0% {
+    transform: scale(0);
+  }
+
+  80% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes miniphoto-two {
+
+  0% {
+    transform: scale(0);
+  }
+
+  80% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes miniphoto-three {
+
+  0% {
+    transform: scale(0);
+  }
+
+  80% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes article-one {
+
+  0% {
+    transform: translate(0,-50%) scale(0);
+  }
+
+  80% {
+    transform: translate(0,0) scale(1.1);
+  }
+
+  100% {
+    transform:  translate(0,0) scale(1);
+  }
+}
+
+@keyframes article-two {
+
+  0% {
+    transform: translate(0,-50%) scale(0);
+  }
+
+  80% {
+    transform: translate(0,0) scale(1.1);
+  }
+
+  100% {
+    transform:  translate(0,0) scale(1);
+  }
+}
+
+@keyframes article-three {
+
+  0% {
+    transform: translate(0,-50%) scale(0);
+  }
+
+  80% {
+    transform: translate(0,0) scale(1.1);
+  }
+
+  100% {
+    transform:  translate(0,0) scale(1);
+  }
+}
+
+@include md {
+
+  @keyframes line {
+
+    0% {
+      height: 0%;
+    }
+
+    100% {
+      height: 70%;
+    }
+  }
+
+  @keyframes miniphoto-one {
+
+    0% {
+      transform: translate(-50%,-50%) scale(0);
+    }
+
+    80% {
+      transform: translate(-50%,-50%) scale(1.1);
+    }
+
+    100% {
+      transform: translate(-50%,-50%) scale(1);
+    }
+  }
+
+  @keyframes miniphoto-two {
+
+    0% {
+      transform: translate(-50%,-50%) scale(0);
+    }
+
+    80% {
+      transform: translate(-50%,-50%) scale(1.1);
+    }
+
+    100% {
+      transform: translate(-50%,-50%) scale(1);
+    }
+  }
+
+  @keyframes miniphoto-three {
+
+    0% {
+      transform: translate(-50%,-50%) scale(0);
+    }
+
+    80% {
+      transform: translate(-50%,-50%) scale(1.1);
+    }
+
+    100% {
+      transform: translate(-50%,-50%) scale(1);
+    }
+  }
+
+  @keyframes article-one {
+
+    0% {
+      transform: translate(70%,-10%) scale(0);
+    }
+
+    80% {
+      transform: translate(0,0) scale(1.1);
+    }
+
+    100% {
+      transform:  translate(0,0) scale(1);
+    }
+  }
+
+  @keyframes article-two {
+
+    0% {
+      transform: translate(70%,-10%) scale(0);
+    }
+  }
+
+  @keyframes article-three {
+
+    0% {
+      transform: translate(70%,-10%) scale(0);
+    }
+
+    80% {
+      transform: translate(0,0) scale(1.1);
+    }
+
+    100% {
+      transform:  translate(0,0) scale(1);
+    }
+  }
+}
+
+@include lg {
+
+  @keyframes line {
+
+    0% {
+      height: 0%;
+    }
+
+    100% {
+      height: 100%;
+    }
+  }
+
+  @keyframes article-two {
+
+    0% {
+      transform: translate(-70%,-10%) scale(0);
+    }
+  }
+}

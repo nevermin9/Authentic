@@ -21,7 +21,7 @@
 /*VIDEO JS STYLESHEETS*/
 .video-js {
   font-size: 6px;
-  color: #fff;
+  color: $text-start;
 
   @include md {
     font-size: 10px;
@@ -37,7 +37,7 @@
   line-height: 2em;
   height: 2em;
   width: 2em;
-  border: 0.06666em solid #fff;
+  border: 0.06666em solid $text-start;
   border-radius: 50%;
   left: 50%;
   top: 55%;
@@ -59,7 +59,7 @@
 .video-js .vjs-volume-level,
 .video-js .vjs-play-progress,
 .video-js .vjs-slider-bar {
-  background: #fff;
+  background: $text-start;
 }
 
 .video-js .vjs-load-progress {
