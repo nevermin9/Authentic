@@ -14,11 +14,21 @@
       justify-content: space-between;
     }
 
+    &__description {
+      text-align: center;
+
+      @include rwd(420) {
+        text-align: left;
+        margin-top: 0;
+      }
+    }
+
     &__items {
-      text-align: right;
+      text-align: center;
       margin-top: 10px;
 
         @include rwd(420) {
+          text-align: right;
           margin-top: 0;
         }
     }

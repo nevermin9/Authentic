@@ -2135,6 +2135,18 @@ video[poster] {
   border: 1px solid #2ebcfc;
 }
 
+input[type="email"]:-ms-input-placeholder {
+  color: #cccccc;
+}
+
+input[type="email"]::-ms-input-placeholder {
+  color: #cccccc;
+}
+
+input[type="email"]::placeholder {
+  color: #cccccc;
+}
+
 .social {
   background-color: #262626;
   color: #666666;

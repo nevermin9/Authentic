@@ -40,14 +40,19 @@
         content: '';
         position: absolute;
         width: 1px;
-        top: -60px;
+        top: -50px;
         left: 50%;
-        height: calc(100% + 110px);
+        height: calc(100% + 100px);
         background: $tl-line-color;
         animation-name: line;
         animation-duration: 4s;
         animation-iteration-count: 1;
         animation-timing-function: linear;
+
+        @include sm {
+          top: -60px;
+          height: calc(100% + 110px);
+        }
 
         @include md {
           left: 95%;

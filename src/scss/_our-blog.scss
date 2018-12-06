@@ -24,7 +24,6 @@
   }
 
   &__article {
-    max-width: 370px;
     width: 100%;
     margin-bottom: 70px;
 
@@ -32,7 +31,12 @@
       margin-bottom: 0;
     }
 
+    @include md {
+      max-width: 570px;
+    };
+
     @include lg {
+      max-width: 370px;
       margin: 0;
       padding: 0 10px;
     }
@@ -40,8 +44,11 @@
 
   &__cont-image {
     margin-bottom: 19px;
-    max-width: 370px;
     width: 100%;
+
+    @include lg {
+      max-width: 370px;
+    }
   }
 
   &__image {
@@ -59,7 +66,6 @@
     position: relative;
     display: inline-block;
     margin-left: 24px;
-
     &::after {
       content: '';
       position: absolute;
@@ -82,7 +88,6 @@
     text-transform: uppercase;
     font-size: 16px;
     color: $h2-color;
-
     &::after {
       content: '';
       position: absolute;
