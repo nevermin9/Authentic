@@ -3,9 +3,9 @@
   align-items: center;
   padding: 60px 40px;
 
-  @include md {
-    padding: 60px 10vw;
-  }
+    @include md {
+      padding: 60px 10vw;
+    }
 
   &__text {
 

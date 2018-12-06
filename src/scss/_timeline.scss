@@ -71,7 +71,7 @@
       position: relative;
       margin: 25px 0;
       padding: 15px;
-      background: #fff;
+      background: $text-start;
 
       @include md {
         float: left;
@@ -155,7 +155,7 @@
       position: absolute;
       transform: rotate(-45deg);
       text-transform: uppercase;
-      color: #fff;
+      color: $text-start;
       width: 200px;
       top: 39px;
       z-index: 1;
@@ -272,7 +272,7 @@
 
                 &--day-one {
                   background-color: $main-color;
-                  color: #fff;
+                  color: $text-start;
                   border: 2px solid $main-color;
                 }
               }
@@ -323,7 +323,7 @@
 
                 &--day-two {
                   background-color: $main-color;
-                  color: #fff;
+                  color: $text-start;
                   border: 2px solid $main-color;
                 }
               }
@@ -373,7 +373,7 @@
 
                 &--day-three {
                   background-color: $main-color;
-                  color: #fff;
+                  color: $text-start;
                   border: 2px solid $main-color;
                 }
               }
