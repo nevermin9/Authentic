@@ -1,4 +1,4 @@
-.header {
+.main-header {
   padding: 42px 0;
   background-color: $bg-header;
 
@@ -6,7 +6,7 @@
     display: flex;
     padding: 0 20px;
 
-    @include rwd(860) {
+    @include rwd(840) {
       justify-content: space-between;
       align-items: center;
     }
@@ -19,12 +19,16 @@
   &__logo {
     position: relative;
     z-index: 5;
+  }
+
+  &__logo-link {
     font-size: 25px;
     text-transform: uppercase;
+    text-decoration: none;
     color: $your-logo-color;
   }
 
-  &__cont-for-burger {
+  &__navigation {
     position: relative;
     z-index: 2;
   }
@@ -95,25 +99,25 @@
       right: -69vw;
     }
 
-    @include rwd(860) {
+    @include rwd(840) {
       display: none;
     }
 
-    &:checked ~ .header__burger-line {
+    &:checked ~ .main-header__burger-line {
       opacity: 1;
       transform: rotate(45deg) translate(-2px, -1px);
     }
 
-    &:checked ~ .header__burger-line--middle {
+    &:checked ~ .main-header__burger-line--middle {
       opacity: 0;
       transform: rotate(0deg) scale(0.2, 0.2);
     }
 
-    &:checked ~ .header__burger-line--bottom {
+    &:checked ~ .main-header__burger-line--bottom {
       transform: rotate(-45deg) translate(0, -1px);
     }
 
-    &:checked ~ .header__nav-group {
+    &:checked ~ .main-header__nav-group {
       transform: none;
     }
   }
@@ -188,7 +192,7 @@
       right: -69vw;
     }
 
-    @include rwd(860) {
+    @include rwd(840) {
       display: none;
     }
 
@@ -208,7 +212,13 @@
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     list-style-type: none;
 
-    @include rwd(860) {
+    @include rwd(610) {
+      display: flex;
+      justify-content: space-between;
+      padding: 125px 50px 20px;
+    }
+
+    @include rwd(840) {
       position: static;
       display: flex;
       width: auto;
@@ -232,7 +242,7 @@
       color: $text-start;
     }
 
-    @include rwd(860) {
+    @include rwd(610) {
       padding: 10px 10px;
     }
   }
@@ -243,4 +253,52 @@
     text-decoration: none;
     color: $your-logo-color;
   }
+
+  &__search-form {
+   height: 42px;
+   position: relative;
+   width: 100%;
+  }
+
+  &__search-btn {
+   background-color: transparent;
+   border: none;
+   height: 42px;
+   width: 42px;
+   position: absolute;
+   top: 0;
+   right: 0;
+   cursor: pointer;
+
+   &:before {
+     content: "\f002";
+     font-family: FontAwesome;
+     font-size: 16px;
+     color: $your-logo-color;
+    }
+  }
+
+  &__search-field {
+   height: 100%;
+   width: 0;
+   padding: 0 42px 0 15px;
+   border: none;
+   border-bottom: 2px solid transparent;
+   outline: none;
+   background: transparent;
+   transition: .4s cubic-bezier(0, 0.8, 0, 1);
+   position: absolute;
+   top: 0;
+   right: 0;
+   z-index: 2;
+   cursor: pointer;
+
+   &:focus {
+     width: 100%;
+     z-index: 1;
+     border-bottom: 2px solid $main-color;
+     cursor: text;
+   }
+ }
 }
+
