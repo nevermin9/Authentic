@@ -177,7 +177,7 @@
     &__mini-photo {
       position: relative;
       margin: auto;
-      @include width-height(100px,100px)
+      @include width-height(100px,100px);
 
       @include md {
         position: absolute;
