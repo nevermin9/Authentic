@@ -23,6 +23,10 @@
         }
     }
 
+    &__link {
+      text-decoration: none;
+    }
+
     &__icon {
       color: $text-color;
       margin-left: 5px;
