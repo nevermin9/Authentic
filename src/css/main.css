@@ -16,6 +16,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body,
 textarea {
   font-family: "Open Sans", "Arial", sans-serif;
@@ -388,7 +393,7 @@ img {
 .main-header__nav-group {
   position: absolute;
   width: 100vw;
-  margin: -100px 0 0 -179px;
+  margin: -100px 0 0 -164px;
   padding: 125px 50px 50px;
   background: #f8f4f4;
   transform-origin: 0% 0%;
@@ -400,7 +405,7 @@ img {
 @media (min-width: 610px) {
   .main-header__nav-group {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 125px 50px 20px;
   }
 }
@@ -434,7 +439,7 @@ img {
 
 @media (min-width: 610px) {
   .main-header__item {
-    padding: 10px 15px;
+    padding: 10px 10px;
   }
 }
 
@@ -486,37 +491,37 @@ img {
 }
 
 .start__heading {
-  font-size: 25px;
-  letter-spacing: 2px;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 5px;
+  font-size: 25px;
+  letter-spacing: 2px;
 }
 
 @media (min-width: 576px) {
   .start__heading {
+    margin-bottom: 15px;
     font-size: 40px;
     letter-spacing: 4px;
-    margin-bottom: 15px;
   }
 }
 
 @media (min-width: 992px) {
   .start__heading {
+    margin-bottom: 30px;
     font-size: 65px;
     letter-spacing: 6px;
-    margin-bottom: 30px;
   }
 }
 
 .start__heading-paragraph {
-  font-size: 16px;
-  letter-spacing: 1px;
   text-align: center;
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 15px;
+  font-size: 16px;
+  letter-spacing: 1px;
 }
 
 @media (min-width: 576px) {
@@ -528,9 +533,9 @@ img {
 
 @media (min-width: 992px) {
   .start__heading-paragraph {
+    margin-bottom: 30px;
     font-size: 35px;
     letter-spacing: 4px;
-    margin-bottom: 30px;
   }
 }
 
@@ -560,11 +565,11 @@ img {
 .start__timer-paragraph {
   text-align: center;
   padding: 0 5px;
-  font-size: 12px;
-  letter-spacing: 2px;
   word-spacing: 32px;
   text-transform: uppercase;
   margin-bottom: 20px;
+  font-size: 12px;
+  letter-spacing: 2px;
 }
 
 @media (min-width: 576px) {
@@ -1173,7 +1178,6 @@ video[poster] {
 }
 
 .our-blog__article {
-  max-width: 370px;
   width: 100%;
   margin-bottom: 70px;
 }
@@ -1182,8 +1186,15 @@ video[poster] {
   margin-bottom: 0;
 }
 
+@media (min-width: 768px) {
+  .our-blog__article {
+    max-width: 570px;
+  }
+}
+
 @media (min-width: 992px) {
   .our-blog__article {
+    max-width: 370px;
     margin: 0;
     padding: 0 10px;
   }
@@ -1191,8 +1202,13 @@ video[poster] {
 
 .our-blog__cont-image {
   margin-bottom: 19px;
-  max-width: 370px;
   width: 100%;
+}
+
+@media (min-width: 992px) {
+  .our-blog__cont-image {
+    max-width: 370px;
+  }
 }
 
 .our-blog__image {
@@ -1317,14 +1333,21 @@ video[poster] {
   content: '';
   position: absolute;
   width: 1px;
-  top: -60px;
+  top: -50px;
   left: 50%;
-  height: calc(100% + 110px);
+  height: calc(100% + 100px);
   background: #dcdcdc;
   animation-name: line;
   animation-duration: 4s;
   animation-iteration-count: 1;
   animation-timing-function: linear;
+}
+
+@media (min-width: 576px) {
+  .timeline__day::before {
+    top: -60px;
+    height: calc(100% + 110px);
+  }
 }
 
 @media (min-width: 768px) {
@@ -2099,7 +2122,8 @@ video[poster] {
   border: 0;
   font-weight: 700;
   color: #fff;
-  border: 1px solid #2ebcfc;
+  border: 1px solid #606060;
+  border-left: 1px solid #fff;
   background-color: #606060;
   transition: 0.1s;
   cursor: pointer;
@@ -2108,6 +2132,7 @@ video[poster] {
 
 .additional__submit:hover {
   background-color: #2ebcfc;
+  border: 1px solid #2ebcfc;
 }
 
 input[type="email"]:-ms-input-placeholder {
@@ -2143,15 +2168,31 @@ input[type="email"]::placeholder {
   }
 }
 
+.social__description {
+  text-align: center;
+}
+
+@media (min-width: 420px) {
+  .social__description {
+    text-align: left;
+    margin-top: 0;
+  }
+}
+
 .social__items {
-  text-align: right;
+  text-align: center;
   margin-top: 10px;
 }
 
 @media (min-width: 420px) {
   .social__items {
+    text-align: right;
     margin-top: 0;
   }
+}
+
+.social__link {
+  text-decoration: none;
 }
 
 .social__icon {
