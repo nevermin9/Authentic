@@ -11,7 +11,7 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: 0% 100%;
-  transition: background-size .5s, color .5s;
+  transition: background-size 1s, color 1s;
   @include button-padding(10px,15px);
 
   &--small{
@@ -29,6 +29,7 @@
     font-size: 14px;
     border: 2px solid $tl-line-color;
     color: $tl-btn-text-color;
+    transition: 1s;
 
     &:hover {
       color:$text-start;
