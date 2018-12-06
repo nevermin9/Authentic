@@ -48,14 +48,16 @@
 
   &__cont:hover &__descr {
     @include md {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
       position: absolute;
       top: 0;
       left: 0;
       background-color: $curtain-color;
       height: 100%;
       width: 100%;
-      padding: 50% 0 0 5%;
+      padding: 0 0 20px 20px;
     }
 
     @include rwd(900) {
