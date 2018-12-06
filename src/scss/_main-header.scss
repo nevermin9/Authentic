@@ -253,52 +253,5 @@
     text-decoration: none;
     color: $your-logo-color;
   }
-
-  &__search-form {
-   height: 42px;
-   position: relative;
-   width: 100%;
-  }
-
-  &__search-btn {
-   background-color: transparent;
-   border: none;
-   height: 42px;
-   width: 42px;
-   position: absolute;
-   top: 0;
-   right: 0;
-   cursor: pointer;
-
-   &:before {
-     content: "\f002";
-     font-family: FontAwesome;
-     font-size: 16px;
-     color: $your-logo-color;
-    }
-  }
-
-  &__search-field {
-   height: 100%;
-   width: 0;
-   padding: 0 42px 0 15px;
-   border: none;
-   border-bottom: 2px solid transparent;
-   outline: none;
-   background: transparent;
-   transition: .4s cubic-bezier(0, 0.8, 0, 1);
-   position: absolute;
-   top: 0;
-   right: 0;
-   z-index: 2;
-   cursor: pointer;
-
-   &:focus {
-     width: 100%;
-     z-index: 1;
-     border-bottom: 2px solid $main-color;
-     cursor: text;
-   }
- }
 }
 

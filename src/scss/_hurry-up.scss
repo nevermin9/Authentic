@@ -1,0 +1,40 @@
+.hurry-up {
+  padding: 55px 0;
+  background: url(../img/content/purchase.png) center center no-repeat;
+  background-size: cover;
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+
+    @include md {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include lg {
+      padding: 0 100px;
+    }
+  }
+
+  &__message {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: $text-start;
+    font-size: 20px;
+
+    @include md {
+      margin-bottom: 0;
+      padding: 12px 10px 12px 0;
+    }
+  }
+
+  &__signup {
+    font-size: 13px;
+
+    @include md {
+      
+    }
+  }
+}
