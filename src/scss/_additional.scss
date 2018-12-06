@@ -1,6 +1,6 @@
-.additional {   
+.additional {
   background-color: $bg-footer-light-grey;
-  
+
   &__wrapper {
     display: flex;
     padding: 50px 20px;
@@ -9,15 +9,15 @@
 
       @include rwd(510) {
         flex-direction: row;
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         justify-content: space-between;
-        padding: 50px 30px 50px 50px;  
+        padding: 50px 30px 50px 50px;
       }
 
       @include rwd(800) {
-        padding: 50px 110px;  
+        padding: 50px 110px;
       }
-      
+
       @include rwd(966) {
         padding: 50px 30px;
       }
@@ -28,7 +28,7 @@
     min-width: 300px;
 
       @include rwd(500) {
-        order: 1;        
+        order: 1;
       }
   }
 
@@ -36,7 +36,7 @@
     margin-top: 20px;
     flex-grow: 0;
     flex-basis: 0;
-    min-width: 150px;    
+    min-width: 150px;
 
       @include rwd(500) {
         margin-top: 0;
@@ -47,14 +47,14 @@
   &__information {
     margin-top: 20px;
     flex-basis: 0;
-    min-width: 150px;    
+    min-width: 150px;
 
       @include rwd(500) {
         order: 4;
       }
 
       @include rwd (966) {
-        margin-top: 0;      
+        margin-top: 0;
         order: 3;
       }
   }
@@ -88,9 +88,9 @@
     font-size: 14px;
     margin-bottom: 20px;
   }
-  
+
   &__list {
-    
+
     &-item {
       list-style-type: none;
       margin-bottom: 10px;
@@ -112,7 +112,7 @@
     }
 
     &--capitalize {
-      text-transform: capitalize; 
+      text-transform: capitalize;
     }
 
     &--mr {
@@ -121,7 +121,7 @@
   }
 
   &__marker {
-    text-transform: uppercase;  
+    text-transform: uppercase;
   }
 
   &__icon {
@@ -153,4 +153,8 @@
       background-color: $main-color-lightness;
     }
   }
+}
+
+input[type="email"]::placeholder {
+  color: #cccccc;
 }

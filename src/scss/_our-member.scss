@@ -31,7 +31,6 @@
   &__cont-for-image {
     position: relative;
     width: 100%;
-    cursor: pointer;
   }
 
   &__image {
@@ -47,7 +46,9 @@
   }
 
   &__cont:hover &__descr {
+
     @include md {
+      cursor: pointer;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
@@ -55,9 +56,8 @@
       top: 0;
       left: 0;
       background-color: $curtain-color;
-      height: 100%;
-      width: 100%;
       padding: 0 0 20px 20px;
+      @include width-height(100%, 100%);
     }
 
     @include rwd(900) {
@@ -73,7 +73,7 @@
     margin-top: 15px;
     font-size: 16px;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 600;
   }
 
   &__position {
@@ -85,16 +85,15 @@
     position: relative;
     margin-top: 40px;
     display: flex;
-    justify-content: space-around;
-    width: 110px;
-
+    justify-content: space-between;
+    width: 100px;
     &::after {
       content: '';
       position: absolute;
       width: 35px;
       top: -180%;
       left: 0;
-      border: 2px solid $text-start;
+      border: 1px solid $text-start;
     }
   }
 
@@ -104,9 +103,6 @@
     color: $text-start;
 
     &:hover {
-      color: $main-color;
-    }
-    &--blue {
       color: $main-color;
     }
   }
