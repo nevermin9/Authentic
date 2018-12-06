@@ -28,8 +28,7 @@
   &--timeline {
     font-size: 14px;
     border: 2px solid $tl-line-color;
-    color: $text-color;
-    @include button-padding(10px,15px);
+    color: $tl-btn-text-color;
 
     &:hover {
       color:$text-start;

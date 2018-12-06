@@ -17,15 +17,19 @@
     &__items {
       text-align: right;
       margin-top: 10px;
-        
+
         @include rwd(420) {
-          margin-top: 0;      
+          margin-top: 0;
         }
     }
 
     &__icon {
       color: $text-color;
       margin-left: 5px;
+
+      &:hover {
+        color: $main-color;
+      }
 
       @include sm {
         margin-left: 15px;
