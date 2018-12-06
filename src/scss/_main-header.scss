@@ -204,7 +204,7 @@
   &__nav-group {
     position: absolute;
     width: 100vw;
-    margin: -100px 0 0 -179px;
+    margin: -100px 0 0 -164px;
     padding: 125px 50px 50px;
     background: $bg-header;
     transform-origin: 0% 0%;
@@ -249,8 +249,8 @@
   }
 
   &__item-link {
-    display: inline-block;
-    width: 100%;
+    // display: inline-block;
+    // width: 100%;
     font-weight: 600;
     font-size: 14px;
     text-transform: uppercase;
