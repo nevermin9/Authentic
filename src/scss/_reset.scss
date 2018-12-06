@@ -15,10 +15,6 @@ img {
   display: block;
 }
 
-body {
-  font-family: $font-stack;
-}
-
 .clearfix {
   &::before {
     content: "";

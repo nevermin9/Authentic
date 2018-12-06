@@ -1,0 +1,257 @@
+.main-header {
+  padding: 42px 0;
+  background-color: $bg-header;
+
+  &__wrap {
+    display: flex;
+    padding: 0 20px;
+
+    @include rwd(840) {
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include rwd(1100) {
+      padding: 0 100px;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 5;
+  }
+
+  &__logo-link {
+    font-size: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $your-logo-color;
+  }
+
+  &__navigation {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__checkbox {
+    position: absolute;
+    z-index: 3;
+    display: block;
+    width: 40px;
+    height: 32px;
+    cursor: pointer;
+    right: -27vw;
+    opacity: 0;
+
+    @include rwd(340) {
+      right: -30vw;
+    }
+
+    @include rwd(360) {
+      right: -33vw;
+    }
+
+    @include rwd(380) {
+      right: -36vw;
+    }
+
+    @include rwd(400) {
+      right: -39vw;
+    }
+
+    @include rwd(420) {
+      right: -42vw;
+    }
+
+    @include rwd(440) {
+      right: -45vw;
+    }
+
+    @include rwd(460) {
+      right: -48vw;
+    }
+
+    @include rwd(480) {
+      right: -51vw;
+    }
+
+    @include rwd(520) {
+      right: -54vw;
+    }
+
+    @include rwd(540) {
+      right: -57vw;
+    }
+
+    @include rwd(580) {
+      right: -60vw;
+    }
+
+    @include rwd(680) {
+      right: -63vw;
+    }
+
+    @include rwd(720) {
+      right: -66vw;
+    }
+
+    @include rwd(790) {
+      right: -69vw;
+    }
+
+    @include rwd(840) {
+      display: none;
+    }
+
+    &:checked ~ .main-header__burger-line {
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+    }
+
+    &:checked ~ .main-header__burger-line--middle {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    &:checked ~ .main-header__burger-line--bottom {
+      transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    &:checked ~ .main-header__nav-group {
+      transform: none;
+    }
+  }
+
+  &__burger-line {
+    position: relative;
+    right: -27vw;
+    top: 7px;
+    z-index: 2;
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    background: $main-color;
+    border-radius: 3px;
+    transform-origin: 4px 0;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+
+    @include rwd(340) {
+      right: -30vw;
+    }
+
+    @include rwd(360) {
+      right: -33vw;
+    }
+
+    @include rwd(380) {
+      right: -36vw;
+    }
+
+    @include rwd(400) {
+      right: -39vw;
+    }
+
+    @include rwd(420) {
+      right: -42vw;
+    }
+
+    @include rwd(440) {
+      right: -45vw;
+    }
+
+    @include rwd(460) {
+      right: -48vw;
+    }
+
+    @include rwd(480) {
+      right: -51vw;
+    }
+
+    @include rwd(520) {
+      right: -54vw;
+    }
+
+    @include rwd(540) {
+      right: -57vw;
+    }
+
+    @include rwd(580) {
+      right: -60vw;
+    }
+
+    @include rwd(680) {
+      right: -63vw;
+    }
+
+    @include rwd(720) {
+      right: -66vw;
+    }
+
+    @include rwd(790) {
+      right: -69vw;
+    }
+
+    @include rwd(840) {
+      display: none;
+    }
+
+    &--bottom {
+      transform-origin: 0% 100%;
+    }
+  }
+
+  &__nav-group {
+    position: absolute;
+    width: 100vw;
+    margin: -100px 0 0 -179px;
+    padding: 125px 50px 50px;
+    background: $bg-header;
+    transform-origin: 0% 0%;
+    transform: translate(-160%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    list-style-type: none;
+
+    @include rwd(610) {
+      display: flex;
+      justify-content: space-between;
+      padding: 125px 50px 20px;
+    }
+
+    @include rwd(840) {
+      position: static;
+      display: flex;
+      width: auto;
+      margin: 0;
+      padding: 0;
+      transform: none;
+    }
+  }
+
+  &__item {
+    list-style-type: none;
+    padding: 10px 0;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+      background: $main-color;
+    }
+
+    &:hover .header__item-link {
+      color: $text-start;
+    }
+
+    @include rwd(610) {
+      padding: 10px 10px;
+    }
+  }
+
+  &__item-link {
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $your-logo-color;
+  }
+}
+
