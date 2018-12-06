@@ -214,7 +214,7 @@
 
     @include rwd(610) {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       padding: 125px 50px 20px;
     }
 
@@ -244,7 +244,7 @@
     }
 
     @include rwd(610) {
-      padding: 10px 15px;
+      padding: 10px 10px;
     }
   }
 
