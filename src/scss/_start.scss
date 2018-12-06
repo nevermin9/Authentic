@@ -4,8 +4,8 @@
   background-image: url("../img/bg/header-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top center; 
-  color: $text-start; 
+  background-position: top center;
+  color: $text-start;
   font-family: $font-stack;
 
     @include sm {
@@ -19,7 +19,7 @@
   &__wrapper {
     position: relative;
     z-index: 1;
-  }  
+  }
 
   &:before {
     content: "";
@@ -27,42 +27,42 @@
     position: absolute;
     background-color: $curtain-color;
     height: 100%;
-    width: 100%;      
+    width: 100%;
     top: 0;
     left: 0;
   }
 
   &__heading {
-    @include text(25px,2px);
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 5px;
+    @include text(25px,2px);
 
       @include sm {
-        @include text(40px,4px);
         margin-bottom: 15px;
+        @include text(40px,4px);
       }
 
       @include lg {
-        @include text(65px,6px);
         margin-bottom: 30px;
+        @include text(65px,6px);
       }
 
     &-paragraph {
-      @include text(16px,1px);
       text-align: center;
       text-transform: uppercase;
       font-weight: 600;
       margin-bottom: 15px;
+      @include text(16px,1px);
 
         @include sm {
           @include text(20px,2px);
         }
 
         @include lg {
-          @include text(35px,4px);
           margin-bottom: 30px;
+          @include text(35px,4px);
         }
     }
   }
@@ -85,10 +85,10 @@
     &-paragraph {
       text-align: center;
       padding: 0 5px;
-      @include text(12px,2px);
       word-spacing: 32px;
       text-transform: uppercase;
       margin-bottom: 20px;
+      @include text(12px,2px);
 
         @include sm {
           word-spacing: 70px;
@@ -117,16 +117,16 @@
 
         @include sm {
           margin-bottom: 0;
-          margin-right: 30px; 
+          margin-right: 30px;
         }
-    
-      &:last-child { 
+
+      &:last-child {
         margin-bottom: 0;
 
           @include sm {
-            margin-right: 0; 
-          } 
+            margin-right: 0;
+          }
       }
     }
-  }  
+  }
 }
