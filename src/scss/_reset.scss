@@ -15,6 +15,16 @@ img {
   display: block;
 }
 
-body {
-  font-family: $font-stack;
+.clearfix {
+  &::before {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }

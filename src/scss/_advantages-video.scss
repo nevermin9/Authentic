@@ -1,17 +1,17 @@
 .advantages-video {
   background: linear-gradient(to bottom, #f8f8f8 43%, white 43%);
 
-  @include sm {
-    background: linear-gradient(to bottom, #f8f8f8 47%, white 47%);
-  }
+    @include sm {
+      background: linear-gradient(to bottom, #f8f8f8 47%, white 47%);
+    }
 
-  @include rwd(676) {
-    background: linear-gradient(to bottom, #f8f8f8 35%, white 35%);
-  }
+    @include rwd(676) {
+      background: linear-gradient(to bottom, #f8f8f8 35%, white 35%);
+    }
 
-  @include lg {
-    background: linear-gradient(to bottom, #f8f8f8 50%, white 50%);
-  }
+    @include lg {
+      background: linear-gradient(to bottom, #f8f8f8 50%, white 50%);
+    }
 
   &__info-items {
 
@@ -26,6 +26,5 @@
       padding: 5% 0;
       justify-content: space-evenly;
     }
-
   }
 }

@@ -1,4 +1,4 @@
 node_modules
 gulpfile.js
-src/css
-.idea/
+src/css/main.css
+.idea

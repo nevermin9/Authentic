@@ -21,4 +21,10 @@
       margin: 25px 0;
     }
   }
+
+  &--center-min-offset {
+    &:after {
+      margin: 20px auto 0;
+    }
+  }
 }
