@@ -5,54 +5,50 @@
   font-weight: bold;
   padding: 20px 30px;
 
-    @include sm {
-      font-size: 14px;
-    }
+  @include sm {
+    font-size: 14px;
+  }
+
+  @include rwd(420) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__description {
+    text-align: center;
 
     @include rwd(420) {
-      display: flex;
-      justify-content: space-between;
+      text-align: left;
+      margin-top: 0;
+    }
+  }
+
+  &__items {
+    text-align: center;
+    margin-top: 10px;
+
+    @include rwd(420) {
+      text-align: right;
+      margin-top: 0;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__icon {
+    color: $text-color;
+    margin-left: 5px;
+    transition: 2s;
+
+    &:hover {
+      color: $main-color;
     }
 
-    &__description {
-      text-align: center;
-
-      @include rwd(420) {
-        text-align: left;
-        margin-top: 0;
-      }
+    @include sm {
+      margin-left: 15px;
+      font-size: 20px;
     }
-
-    &__items {
-      text-align: center;
-      margin-top: 10px;
-
-        @include rwd(420) {
-          text-align: right;
-          margin-top: 0;
-        }
-    }
-
-    &__link {
-      text-decoration: none;
-    }
-
-    &__icon {
-      color: $text-color;
-      margin-left: 5px;
-      transition: 2s;
-
-      &:hover {
-        color: $main-color;
-      }
-
-      @include sm {
-        margin-left: 15px;
-        font-size: 20px;
-      }
-
-      &::last-child {
-        margin-left: 0;
-      }
-    }
+  }
 }
