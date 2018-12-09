@@ -33,7 +33,7 @@
 
     @include md {
       max-width: 570px;
-    };
+    }
 
     @include lg {
       max-width: 370px;
@@ -110,7 +110,6 @@
         top: 40px;
       }
     }
-
   }
 
   &__message-of-blog {

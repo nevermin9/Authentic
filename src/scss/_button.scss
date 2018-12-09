@@ -17,7 +17,6 @@
   &--small{
     font-size: 14px;
     border: 2px solid $main-color;
-    @include button-padding(10px,15px);
     color: $main-color;
 
     &:hover {
@@ -34,7 +33,7 @@
     &:hover {
       color:$text-start;
     }
-  }
+  }  
 
   @include sm {
     @include button-padding(15px,30px);
@@ -47,5 +46,14 @@
   &:hover {
     background-size: 100% 100%;
     border-color: $main-color;
+  }
+
+  &--main-header {      
+    border: 0;
+    @include button-padding(10px,10px);
+      
+      &:hover {
+        color:$text-start;
+      }
   }
 }
