@@ -48,24 +48,24 @@
         margin-bottom: 30px;
         @include text(65px,6px);
       }
-
-    &-paragraph {
-      text-align: center;
-      text-transform: uppercase;
-      font-weight: 600;
-      margin-bottom: 15px;
-      @include text(16px,1px);
-
-        @include sm {
-          @include text(20px,2px);
-        }
-
-        @include lg {
-          margin-bottom: 30px;
-          @include text(35px,4px);
-        }
-    }
   }
+
+  &__heading-paragraph {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 15px;
+    @include text(16px,1px);
+
+      @include sm {
+        @include text(20px,2px);
+      }
+
+      @include lg {
+        margin-bottom: 30px;
+        @include text(35px,4px);
+      }
+    }
 
   &__timer {
     text-align: center;
@@ -81,25 +81,25 @@
       @include lg {
         @include text(70px,4px);
       }
+  }
 
-    &-paragraph {
-      text-align: center;
-      padding: 0 5px;
-      word-spacing: 32px;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-      @include text(12px,2px);
+  &__timer-paragraph {
+    text-align: center;
+    padding: 0 5px;
+    word-spacing: 32px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    @include text(12px,2px);
 
-        @include sm {
-          word-spacing: 70px;
-          margin-bottom: 50px;
-        }
+      @include sm {
+        word-spacing: 70px;
+        margin-bottom: 50px;
+      }
 
-        @include lg {
-          word-spacing: 110px;
-          margin-bottom: 100px;
-        }
-    }
+      @include lg {
+        word-spacing: 110px;
+        margin-bottom: 100px;
+      }
   }
 
   &__links {
@@ -111,22 +111,22 @@
         flex-direction: row;
         justify-content: center;
       }
+  }
 
-    &-item {
-      margin-bottom: 15px;
+  &__links-item {
+    margin-bottom: 15px;
+
+      @include sm {
+        margin-bottom: 0;
+        margin-right: 30px;
+      }
+
+    &:last-child {
+      margin-bottom: 0;
 
         @include sm {
-          margin-bottom: 0;
-          margin-right: 30px;
+          margin-right: 0;
         }
-
-      &:last-child {
-        margin-bottom: 0;
-
-          @include sm {
-            margin-right: 0;
-          }
-      }
     }
   }
 }

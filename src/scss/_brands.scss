@@ -73,7 +73,7 @@
 
       @include sm {
 
-        @include border(0,1,0,0)
+        @include border(0,1,0,0);
       }
 
       @include lg {
@@ -90,7 +90,7 @@
 
         @include border(0,0,0,0);
       }
-      & img {
+      &__img {
 
         @include sm {
           width: auto;
@@ -100,7 +100,7 @@
     }
   }
 
-  & img {
+  &__img {
     margin: auto;
   }
 }

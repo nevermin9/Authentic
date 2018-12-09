@@ -11,10 +11,10 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <section class="search" id="search">
+  <div class="search" id="search">
     <a class="search__close" href="#"><span class="fas fa-times"></span></a>
     <input class="search__input" type="search" placeholder="Search">
-  </section>
+  </div>
   <header class="main-header">
     <div class="main-header__wrap">
       <div class="main-header__logo">
@@ -23,48 +23,48 @@
         </a>
       </div>
       <nav class="main-header__navigation">
-        <input class="main-header__checkbox" type="checkbox">
+        <input class="main-header__checkbox" type="checkbox" id="humburger">
         <span class="main-header__burger-line main-header__burger-line--top"></span>
         <span class="main-header__burger-line  main-header__burger-line--middle"></span>
         <span class="main-header__burger-line main-header__burger-line--bottom"></span>
         <ul class="main-header__nav-group">
           <li class="main-header__item">
-            <a href="#" class="main-header__item-link">
+            <a href="#" class="main-header__item-link button button--main-header">
               home
             </a>
           </li>
           <li class="main-header__item">
-            <a href="#" class="main-header__item-link">
+            <a href="#" class="main-header__item-link button button--main-header">
               pages
             </a>
           </li>
           <li class="main-header__item">
-            <a href="#" class="main-header__item-link">
+            <a href="#" class="main-header__item-link button button--main-header">
               shortcodes
             </a>
           </li>
           <li class="main-header__item">
-            <a href="#" class="main-header__item-link">
+            <a href="#" class="main-header__item-link button button--main-header">
               blog
             </a>
           </li>
           <li class="main-header__item">
-            <a href="#" class="main-header__item-link">
+            <a href="#" class="main-header__item-link button button--main-header">
               portfolio
             </a>
           </li>
           <li class="main-header__item">
-            <a href="#" class="main-header__item-link">
+            <a href="#" class="main-header__item-link button button--main-header">
               contact
             </a>
           </li>
           <li class="main-header__item">
-            <a href="#" class="main-header__item-link">
+            <a href="#" class="main-header__item-link button button--main-header">
               shop
             </a>
           </li>
           <li class="main-header__item">
-            <a href="#search" class="main-header__item-link">
+            <a href="#search" class="main-header__item-link button button--main-header">
               <span class="fas fa-search"></span>
             </a>
           </li>
@@ -114,7 +114,7 @@
       <img src="img/content/section-two-man.png" alt="man">
     </div>
   </section>
-  <section class="advantages-video">
+  <div class="advantages-video">
     <article class="advantages-video__info-items">
       <div class="info-item advantages-video__info-item">
         <div class="info-item__image">
@@ -172,25 +172,25 @@
       </figure>
       <div class="brands">
         <div class="brands__block brands__block--first">
-          <img src="img/content/brand-hendeson.png" alt="Logo" width="126" height="100">
+          <img class="brands__img" src="img/content/brand-hendeson.png" alt="Logo" width="126" height="100">
         </div>
         <div class="brands__block brands__block--second">
-          <img src="img/content/brand-authentic.png" alt="Logo" width="158" height="100">
+          <img class="brands__img" src="img/content/brand-authentic.png" alt="Logo" width="158" height="100">
         </div>
         <div class="brands__block brands__block--third">
-          <img src="img/content/brand-authentic-three.png" alt="Logo" width="127" height="100">
+          <img class="brands__img" src="img/content/brand-authentic-three.png" alt="Logo" width="127" height="100">
         </div>
         <div class="brands__block brands__block--fourth">
-          <img src="img/content/brand-vintage-authentic.png" alt="Logo" width="136" height="100">
+          <img class="brands__img" src="img/content/brand-vintage-authentic.png" alt="Logo" width="136" height="100">
         </div>
         <div class="brands__block brands__block--fifth">
-          <img src="img/content/brand-authentic-two.png" alt="Logo" width="210" height="100">
+          <img class="brands__img" src="img/content/brand-authentic-two.png" alt="Logo" width="210" height="100">
         </div>
         <div class="brands__block brands__block--sixth">
-          <img src="img/content/brand-vintage-authentic-two.png" alt="Logo" width="110" height="111">
+          <img class="brands__img" src="img/content/brand-vintage-authentic-two.png" alt="Logo" width="110" height="111">
         </div>
       </div>
-    </section>
+    </div>
     <section class="our-member">
       <h2 class="our-member__headline line line--center">
         our member
@@ -368,7 +368,7 @@
       <label class="timeline__bottom-btn timeline__bottom-btn--day-two button  button--small" for="day-two">go to next day</label>
       <label class="timeline__bottom-btn timeline__bottom-btn--day-three button button--small" for="day-three">go to next day</label>
     </section>
-    <section class="hurry-up">
+    <div class="hurry-up">
       <div class="hurry-up__wrap">
         <p class="hurry-up__message">
           hurry up.ticket is free with limitted amount!!!
@@ -377,7 +377,7 @@
           signup now
         </a>
       </div>
-    </section>
+    </div>
     <section class="our-blog">
       <h2 class="our-blog__headline line line--center-min-offset">
         our blog
@@ -398,7 +398,9 @@
             </a>
           </p>
           <h3 class="our-blog__title-of-blog">
-            we are back. nice to see you soon
+            <a class="our-blog__link-to-blog" href="#">
+              we are back. nice to see you soon
+            </a>
           </h3>
           <p class="our-blog__message-of-blog">
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
@@ -419,7 +421,9 @@
             </a>
           </p>
           <h3 class="our-blog__title-of-blog">
-            we are back. nice to see you soon
+            <a class="our-blog__link-to-blog" href="#">
+              we are back. nice to see you soon
+            </a>
           </h3>
           <p class="our-blog__message-of-blog">
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
@@ -440,7 +444,9 @@
             </a>
           </p>
           <h3 class="our-blog__title-of-blog">
-            we are back. nice to see you soon
+            <a class="our-blog__link-to-blog" href="#">
+              we are back. nice to see you soon
+            </a>
           </h3>
           <p class="our-blog__message-of-blog">
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
@@ -487,7 +493,7 @@
               <span class="fas fa-map-marker-alt additional__icon">
               </span>
               <a class="additional__link additional__link--capitalize" href="#marker">
-                nobinagar savar 
+                nobinagar savar
                 <span class="additional__marker">
                   dhara
                 </span>
@@ -580,7 +586,7 @@
           newsletter
         </h3>
         <p class="additional__description">
-          Singup to receive our interesting news.<br> 
+          Singup to receive our interesting news.<br>
           We never send spam!
         </p>
         <form action="#" method="post">
@@ -592,10 +598,10 @@
   </section>
   <footer class="social">
     <p class="social__description">
-      All 
+      All
       <span class="social__description--capitalize">
         rights reserved.
-      </span> 
+      </span>
       Designed by Mahud Rana
     </p>
     <div class="social__items">
