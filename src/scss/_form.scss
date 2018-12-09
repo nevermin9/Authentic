@@ -9,6 +9,7 @@
     line-height: 25px;
     width: 100%;
     padding: 2px 10px;
+    resize: vertical;
 
       @include md { 
         font-size: 16px;
