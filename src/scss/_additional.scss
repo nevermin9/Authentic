@@ -89,14 +89,11 @@
     margin-bottom: 20px;
   }
 
-  &__list {
-
-    &-item {
-      list-style-type: none;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-    }
+  &__list-item {
+    list-style-type: none;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
   }
 
   &__link {
@@ -140,7 +137,6 @@
   &__submit {
     line-height: 35px;
     padding: 1px 20px;
-    border: 0;
     font-weight: 700;
     color: $text-start;
     border: 1px solid $bg-footer-input-grey;
