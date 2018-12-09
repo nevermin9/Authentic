@@ -21,6 +21,10 @@
       text-align: left;
       margin-top: 0;
     }
+
+    &--capitalize {
+      text-transform: capitalize;
+    }
   }
 
   &__items {
