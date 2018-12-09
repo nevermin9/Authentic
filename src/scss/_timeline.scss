@@ -116,21 +116,6 @@
         }
       }
 
-      &-img {
-        width: 100%;
-      }
-
-      &-title {
-        text-align: left;
-        margin: 20px 0;
-        text-transform: uppercase;
-      }
-
-      &-text {
-        text-align: left;
-        margin-bottom: 20px;
-      }
-
       &--one {
         animation-name: article-one;
         animation-duration: 1.5s;
@@ -156,6 +141,21 @@
       }
     }
 
+    &__article-img {
+      width: 100%;
+    }
+
+    &__article-title {
+      text-align: left;
+      margin: 20px 0;
+      text-transform: uppercase;
+    }
+
+    &__article-text {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
     &__time {
       position: absolute;
       transform: rotate(-45deg);
@@ -177,7 +177,7 @@
     &__mini-photo {
       position: relative;
       margin: auto;
-      @include width-height(100px,100px)
+      @include width-height(100px,100px);
 
       @include md {
         position: absolute;
