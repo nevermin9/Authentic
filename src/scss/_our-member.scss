@@ -45,30 +45,23 @@
     transition: background-color .2s linear;
 
     @include md {
-      opacity: 0;
+     display: none;
     }
   }
 
-  &__cont:hover &__descr {
+  &__cont-for-image:hover &__descr {
 
     @include md {
       cursor: pointer;
-      opacity: 1;
+      display: flex;
+      align-items: flex-start;
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
       background-color: $curtain-color;
       padding: 0 0 20px 20px;
       @include width-height(100%, 100%);
-    }
-
-    @include rwd(900) {
-      padding-top: 60%;
-    }
-
-    @include rwd(1100) {
-      padding-top: 70%;
-    }
+    }    
   }
 
   &__name {
@@ -103,7 +96,7 @@
     font-size: 14px;
     text-decoration: none;
     color: $text-start;
-    transition: 2s;
+    transition: 0.5s;
 
     &:hover {
       color: $main-color;
