@@ -91,11 +91,9 @@
     text-transform: uppercase;
     font-size: 15px;
     color: $h2-color;
-    text-align: left;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    text-align: left;  
     border-bottom: 1px solid $grey-decor-item;
+    max-width: 100%;
   }
 
   &__link-to-blog {
@@ -103,6 +101,14 @@
     color: inherit;
     cursor: pointer;
     transition: 0.5s;
+    max-width: 100%;
+
+    &--three-dots {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
 
     &:hover {
       color: $main-color;
@@ -116,18 +122,5 @@
     line-height: 24px;
     margin-bottom: 20px;
     max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  &__read-more {
-    text-decoration: none;
-    color: $text-color;
-    transition: 0.5s;
-
-    &:hover {
-      color: $main-color;
-      text-decoration: underline;
-    }
-  }
+  }  
 }

@@ -1066,10 +1066,8 @@ video[poster] {
   font-size: 15px;
   color: #000000;
   text-align: left;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   border-bottom: 1px solid #dddddd;
+  max-width: 100%;
 }
 
 .our-blog__link-to-blog {
@@ -1077,6 +1075,14 @@ video[poster] {
   color: inherit;
   cursor: pointer;
   transition: 0.5s;
+  max-width: 100%;
+}
+
+.our-blog__link-to-blog--three-dots {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .our-blog__link-to-blog:hover {
@@ -1090,19 +1096,6 @@ video[poster] {
   line-height: 24px;
   margin-bottom: 20px;
   max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.our-blog__read-more {
-  text-decoration: none;
-  color: #666666;
-  transition: 0.5s;
-}
-
-.our-blog__read-more:hover {
-  color: #03a9f4;
-  text-decoration: underline;
 }
 
 /*timeline style*/
