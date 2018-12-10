@@ -42,7 +42,11 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    transition: background-color .2s linear;
+    background-color: $curtain-color;
+    animation-name: background;
+    animation-duration: .3s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: 1;
 
     @include md {
      display: none;
@@ -58,10 +62,9 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      background-color: $curtain-color;
       padding: 0 0 20px 20px;
       @include width-height(100%, 100%);
-    }    
+    }
   }
 
   &__name {
@@ -101,5 +104,17 @@
     &:hover {
       color: $main-color;
     }
+  }
+}
+
+@keyframes background {
+  0% {
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  100% {
+    opacity: 1;
+    background-color: $curtain-color;
   }
 }
