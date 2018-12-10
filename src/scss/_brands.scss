@@ -84,7 +84,7 @@
 
     &--sixth {
 
-      @include border(0,0,0,0)
+      @include border(0,0,0,0);
 
       @include lg {
 
