@@ -855,7 +855,6 @@ video[poster] {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-color: rgba(0, 0, 0, 0.5);
   animation-name: background;
   animation-duration: .3s;
   animation-fill-mode: backwards;
@@ -865,6 +864,7 @@ video[poster] {
 @media (min-width: 768px) {
   .our-member__descr {
     display: none;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 
