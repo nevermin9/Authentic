@@ -42,7 +42,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-color: $curtain-color;
     animation-name: background;
     animation-duration: .3s;
     animation-fill-mode: backwards;
@@ -50,6 +49,7 @@
 
     @include md {
      display: none;
+     background-color: $curtain-color;
     }
   }
 
